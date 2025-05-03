@@ -1,0 +1,21 @@
+@import './assets/fonts/fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #08090E;
+  --gradiant-first-color: #0B0A10;
+  --gradiant-second-color-one: #0D0E12;
+  --gradiant-second-color-two: #08090E;
+  --gradiant-third-color: #100F16;
+  
+  --elipse-gradiant-first-color: #181521;
+  --elipse-gradiant-second-color: #07070D;
+  --elipse-bg-color: #6C6B6B;
+
+  --text-white-color: #FFFFFF;
+  --text-grey-color: #DADADA;
+}
