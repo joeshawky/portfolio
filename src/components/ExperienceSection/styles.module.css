@@ -96,7 +96,6 @@
 }
 
 .timelineBox {
-    background: linear-gradient(to left, #0F0F15, rgba(255, 255, 255, 0.05));
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;

@@ -67,6 +67,7 @@ function Card({ row, position, companyName, tasks, isLeft = false }) {
                 gridColumn: `${isLeft ? `1 / span 1` : `3 / span 1`}`,
                 borderLeft: `${isLeft ? `2px solid white` : ""}`,
                 borderRight: `${isLeft ? `` : "2px solid white"}`,
+                background: `linear-gradient(to ${isLeft ? 'left' : 'right'}, #0F0F15, rgba(255, 255, 255, 0.05))`
             }}
         >
             <h1 className={styles.position}>{position}</h1>
