@@ -1,0 +1,91 @@
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 10rem;
+    min-height: 75vh;
+    z-index: 1;
+}
+
+.heroCircle {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(85vw, 480px);
+    height: min(80vw, 425px);
+    border-radius: 50%;
+    background-color: red;
+    background: linear-gradient(to bottom, #181521, #07070D);
+    z-index: -1;
+    filter: blur(0.5px);
+    box-shadow: 0 -20px 30px rgba(255, 255, 255, 0.4);
+}
+
+.heroGlow {
+    position: absolute;
+    top: calc(2rem - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(85vw, 480px);
+    height: min(80vw, 425px);
+    border-radius: 50%;
+    background-color: white;
+    filter: blur(1px);
+    z-index: -2;
+}
+
+.heroTitle {
+    font-size: var(--fs-5);
+    font-weight: 300;
+    font-family: 'sansation-regular', sans-serif;
+}
+
+.hero-subtitle {
+    font-size: var(--fs-3);
+    font-family: 'sansation-light';
+    color: #DADADA;
+    margin: 0.5rem 0;
+}
+
+.heroLocationDiv {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.heroLocation {
+    font-family: 'sansation-light';
+    font-size: var(--fs-1);
+    font-weight: 300;
+    color: #DADADA;
+}
+
+.locationIcon {
+    height: 1.5rem;
+}
+
+.heroDescription {
+    font-family: 'sansation-light';
+    font-size: var(--fs-2);
+    margin: 2rem auto;
+    padding-inline: 2rem;
+    color: #DADADA;
+}
+
+.heroButton {
+    /* position: relative; */
+    /* z-index: 3; */
+    font-size: var(--fs-1);
+    font-family: 'inter';
+    padding: 1rem 2rem;
+    width: fit-content;
+    align-self: center;
+    border-radius: .5rem;
+    background: none;
+    border: 1px solid #787878;
+    color: white;
+    cursor: pointer;
+}
