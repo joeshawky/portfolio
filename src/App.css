@@ -239,7 +239,7 @@
   grid-row: 1 / span 3;
   grid-column: 2;
   align-self: self-start;
-  top: calc(100% / 2.5 - var(--experience-gap));
+  top: calc(100% / 3 + (var(--experience-gap) / 3));
 }
 
 .circle {
