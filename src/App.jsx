@@ -3,17 +3,115 @@ import locationImage from "./assets/icons/location.png";
 import projectOne from "./assets/images/projectOne.png";
 import ExperienceSection from "./components/ExperienceSection";
 import HeroSection from "./components/HeroSection";
+import pythonImage from './assets/icons/python.png';
+import cplusplusImage from './assets/icons/cplusplus.png';
+import jsImage from './assets/icons/js.png';
+import reactImage from './assets/icons/react.png';
+
+import gsap from 'gsap';
+import {} from 'gsap/'
+
+import { useGSAP } from "@gsap/react";
+import { useEffect, useRef } from "react";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { useWindowWidth } from "./hooks/useWindowWidth";
+
+gsap.registerPlugin(useGSAP, MotionPathPlugin); // register the hook to avoid React version discrepancies 
 
 function App() {
+
+    const pythonRef = useRef();
+    const jsRef = useRef();
+    const reactRef = useRef();
+    const cplusplusRef = useRef();
+    const refs = [pythonRef, jsRef, reactRef, cplusplusRef]
+
+    const imagesWithRefs = [
+        {src: cplusplusImage, ref: cplusplusRef},
+        {src: jsImage, ref: jsRef},
+        {src: reactImage, ref: reactRef},
+        {src: pythonImage, ref: pythonRef}
+    ]
+
+    const width = useWindowWidth();
+
+
+    useEffect(() => {
+        refs.forEach((ref, i) => {
+            gsap.to(ref.current, {
+              duration: 8,
+              repeat: -1,
+              ease: "linear",
+              motionPath: {
+                path: "#skillsPath",
+                align: "#skillsPath",
+                alignOrigin: [0.5, 0.5],
+                start: i / refs.length, // evenly spaced
+                end: (i / refs.length) + 1,
+              },
+            });
+          });
+    }, []);
+
     return (
         <div className="app">
-            <HeroSection/>
-            <ExperienceSection/>
+            <HeroSection />
+            <ExperienceSection />
+            <section className="skillsSection">
+                <h2 className="title">SKILLS</h2>
+                <svg
+                    className="svgSkills"
+                    viewBox="0 0 1440 486"  
+                    fill="none"
+                    width="100%"
+                    height="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M1440 0.999974C1440 0.999974 1373.45 -6.25684 1245 46C1116.55 98.2567 999.96 192.706 840 216C643.743 244.58 503.47 161.245 340 136C176.53 110.755 0 236 0 236V486C0 486 204.668 413.106 340 386C582.326 337.463 598.785 525.119 840 466C1008.82 424.624 1080.06 362.783 1245 296C1326.11 263.159 1440 251 1440 251V0.999974Z"
+                        fill="white"
+                    />
+                    <path
+                        id="skillsPath"
+                        d="M1494.5 1.50001C1494.5 1.50001 1373.45 -7.25679 1245 45C1116.55 97.2568 999.96 191.706 840 215C643.743 243.58 503.47 160.245 340 135C176.53 109.755 -78 266 -78 266"
+                        // stroke="red"
+                        // strokeWidth={"5px"}
+                        transform="translate(0, 125)"
+                    />
+                </svg>
+                <div className="content">
+                    
+                    <div className="iconWrapper" ref={pythonRef}>
+                        <img
+                            className="iconImg"
+                            src={pythonImage}
+                        />
+                    </div>
+                    <div className="iconWrapper" ref={reactRef}>
+                        <img
+                            className="iconImg"
+                            src={reactImage}
+                        />
+                    </div>
+                    <div className="iconWrapper" ref={jsRef}>
+                        <img
+                            className="iconImg"
+                            src={jsImage}
+                        />
+                    </div>
+                    <div className="iconWrapper" ref={cplusplusRef}>
+                        <img
+                            className="iconImg"
+                            src={cplusplusImage}
+                        />
+                    </div>
+                </div>
+            </section>
 
             <section className="projects">
                 <svg
                     id="svg-three"
-
                     viewBox="0 0 1440 1376"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +129,7 @@ function App() {
                             y2="1376"
                             gradientUnits="userSpaceOnUse"
                         >
-                            <stop stop-color="#0B0A10" />
+                            <stop stopColor="#0B0A10" />
                             <stop offset="0.5" stop-color="#08090E" />
                             <stop offset="1" stop-color="#100F16" />
                             {/* <stop stop-color="#00F" /> */}
@@ -41,7 +139,7 @@ function App() {
                     </defs>
                 </svg>
                 <svg
-                id="svg-four"
+                    id="svg-four"
                     viewBox="0 0 1440 1547"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

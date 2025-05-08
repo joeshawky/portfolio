@@ -1,7 +1,10 @@
 :root {
   --to-be-continued: clamp(0.5rem, 1vw + 1rem, 1.25rem);
   --tasks-size: clamp(0.5rem, 0.5vw + 0.5rem, 1rem);
-  --positions-size: clamp(0.5rem, 0.75vw + 0.75rem, 1.2rem);
+
+  --position-size: clamp(1rem, 1vw + 1rem, 2rem);
+
+  --company-size: clamp(0.5rem, 0.75vw + 0.6rem, 1.2rem);
   
   --fs-1: clamp(0.5rem, 1vw + 1rem, 10.5rem);
   --fs-2: clamp(1rem, 3vw + 1rem, 2rem);
@@ -32,7 +35,7 @@
 
 .projects {
   position: relative;
-  margin-top: 10rem;
+  /* margin-top: 35rem; */
   z-index: 0;
 }
 
@@ -84,7 +87,8 @@
 
 #svg-four {
   position: absolute;
-  top: -20vh;
+  /* top: -20vh; */
+  top: 0;
   left: 0;
   width: 100%;
   z-index: -1;
@@ -108,3 +112,40 @@
   height: 200px;
 }
 
+
+.skillsSection {
+  position: relative;
+  margin-top: 10rem;
+}
+
+.svgSkills {
+  z-index: 0;
+  display: block;
+  width: 100%;
+  max-height: 40vh;
+}
+
+.content {
+  position: relative;
+  min-height: 10vh;
+}
+
+.iconWrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.iconImg {
+  width: clamp(30px, 10vw, 120px);
+  height: auto;
+  margin: 0 2rem; /* this gives you spacing between icons */
+}
+
+.title {
+  font-family: 'inter';
+    font-weight: 400;
+    margin-top: 0rem;
+    font-size: var(--section-title-size);
+    letter-spacing: 0.4rem;
+}

@@ -125,6 +125,7 @@ export default function ExperienceSection() {
     return (
         <section className={styles.experience}>
             <Svgs />
+            <div className={styles.content}>
             <h2 className={styles.title}>EXPERIENCE</h2>
             <div className={styles.timeline}>
                 <div className={styles.timelineMidLine}></div>
@@ -165,6 +166,8 @@ export default function ExperienceSection() {
                 ))}
             </div>
             <p className={styles.toBeContinued}>To be continued...</p>
+            </div>
+            
         </section>
     );
 }

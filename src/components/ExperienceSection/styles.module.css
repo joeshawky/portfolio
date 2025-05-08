@@ -3,6 +3,10 @@
     z-index: 0;
 }
 
+.experience > * {
+    /* z-index: 3; */
+}
+
 .title {
     font-family: 'inter';
     font-weight: 400;
@@ -11,6 +15,9 @@
     letter-spacing: 0.4rem;
 }
 
+.content {
+    position: relative;
+}
 
 
 .svgOne {
@@ -99,8 +106,9 @@
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
     padding: min(2rem, 6vw);
+    /* padding: min(2rem, 6vw) min(4rem, 6vw); */
 }
 
 .timelineDate {
@@ -114,15 +122,15 @@
 .position {
     align-self: flex-start;
     font-family: 'inter';
-    font-weight: 900;
-    font-size: var(--to-be-continued);
+    font-size: var(--position-size);
 }
 
 .companyName {
     align-self: flex-end;
     font-family: 'inter';
+    font-weight: 300;
     font-style: italic;
-    font-size: var(--positions-size);
+    font-size: var(--company-size);
 }
 
 .task {
