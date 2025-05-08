@@ -3,54 +3,54 @@ import locationImage from "./assets/icons/location.png";
 import projectOne from "./assets/images/projectOne.png";
 import ExperienceSection from "./components/ExperienceSection";
 import HeroSection from "./components/HeroSection";
-import pythonImage from './assets/icons/python.png';
-import cplusplusImage from './assets/icons/cplusplus.png';
-import jsImage from './assets/icons/js.png';
-import reactImage from './assets/icons/react.png';
+import pythonImage from "./assets/icons/python.png";
+import cplusplusImage from "./assets/icons/cplusplus.png";
+import jsImage from "./assets/icons/js.png";
+import reactImage from "./assets/icons/react.png";
+import code from "./assets/images/code.svg";
+import redirect from "./assets/images/topRight.svg";
 
-import gsap from 'gsap';
-import {} from 'gsap/'
+import gsap from "gsap";
+import {} from "gsap/";
 
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useWindowWidth } from "./hooks/useWindowWidth";
 
-gsap.registerPlugin(useGSAP, MotionPathPlugin); // register the hook to avoid React version discrepancies 
+gsap.registerPlugin(useGSAP, MotionPathPlugin); // register the hook to avoid React version discrepancies
 
 function App() {
-
     const pythonRef = useRef();
     const jsRef = useRef();
     const reactRef = useRef();
     const cplusplusRef = useRef();
-    const refs = [pythonRef, jsRef, reactRef, cplusplusRef]
+    const refs = [pythonRef, jsRef, reactRef, cplusplusRef];
 
     const imagesWithRefs = [
-        {src: cplusplusImage, ref: cplusplusRef},
-        {src: jsImage, ref: jsRef},
-        {src: reactImage, ref: reactRef},
-        {src: pythonImage, ref: pythonRef}
-    ]
+        { src: cplusplusImage, ref: cplusplusRef },
+        { src: jsImage, ref: jsRef },
+        { src: reactImage, ref: reactRef },
+        { src: pythonImage, ref: pythonRef },
+    ];
 
     const width = useWindowWidth();
-
 
     useEffect(() => {
         refs.forEach((ref, i) => {
             gsap.to(ref.current, {
-              duration: 8,
-              repeat: -1,
-              ease: "linear",
-              motionPath: {
-                path: "#skillsPath",
-                align: "#skillsPath",
-                alignOrigin: [0.5, 0.5],
-                start: i / refs.length, // evenly spaced
-                end: (i / refs.length) + 1,
-              },
+                duration: 8,
+                repeat: -1,
+                ease: "linear",
+                motionPath: {
+                    path: "#skillsPath",
+                    align: "#skillsPath",
+                    alignOrigin: [0.5, 0.5],
+                    start: i / refs.length, // evenly spaced
+                    end: i / refs.length + 1,
+                },
             });
-          });
+        });
     }, []);
 
     return (
@@ -61,7 +61,7 @@ function App() {
                 <h2 className="title">SKILLS</h2>
                 <svg
                     className="svgSkills"
-                    viewBox="0 0 1440 486"  
+                    viewBox="0 0 1440 486"
                     fill="none"
                     width="100%"
                     height="100%"
@@ -81,30 +81,17 @@ function App() {
                     />
                 </svg>
                 <div className="content">
-                    
                     <div className="iconWrapper" ref={pythonRef}>
-                        <img
-                            className="iconImg"
-                            src={pythonImage}
-                        />
+                        <img className="iconImg" src={pythonImage} />
                     </div>
                     <div className="iconWrapper" ref={reactRef}>
-                        <img
-                            className="iconImg"
-                            src={reactImage}
-                        />
+                        <img className="iconImg" src={reactImage} />
                     </div>
                     <div className="iconWrapper" ref={jsRef}>
-                        <img
-                            className="iconImg"
-                            src={jsImage}
-                        />
+                        <img className="iconImg" src={jsImage} />
                     </div>
                     <div className="iconWrapper" ref={cplusplusRef}>
-                        <img
-                            className="iconImg"
-                            src={cplusplusImage}
-                        />
+                        <img className="iconImg" src={cplusplusImage} />
                     </div>
                 </div>
             </section>
@@ -167,24 +154,28 @@ function App() {
                     </defs>
                 </svg>
 
-                <h2>Projects</h2>
-                <div className="project-cards">
+                <h2>PROJECTS</h2>
+                <div className="projectCards">
                     {Array(5)
                         .fill()
                         .map((_, index) => (
-                            <div
-                                className="project-card"
-                                key={index}
-                                style={{
-                                    backgroundImage: `url(${projectOne})`,
-                                }}
-                            >
-                                <h3>PROJECT ONE</h3>
-                                <p>
-                                    lorem ipsum uit amet connected samia
-                                    dostia...
+                            <div className="projectCard" key={index}>
+                                <img src={projectOne} className="cardImage" />
+                                <div></div>
+                                <p className="description">
+                                    lorem ipsum uit amet connected samia dosti
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Veniam fugit nostrum sunt
+                                    voluptates incidunt ab cumque enim nemo
                                 </p>
-                                <p className="round">Round 2</p>
+                                <h3 className="projectTitle">PROJECT ONE</h3>
+                                <div className="anchors">
+                                    <img src={code} className="codeLink" />
+                                    <img
+                                        src={redirect}
+                                        className="redirectLink"
+                                    />
+                                </div>
                             </div>
                         ))}
                 </div>

@@ -42,7 +42,7 @@
     font-family: 'sansation-regular', sans-serif;
 }
 
-.hero-subtitle {
+.heroSubtitle {
     font-size: var(--fs-3);
     font-family: 'sansation-light';
     color: #DADADA;
