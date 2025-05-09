@@ -87,7 +87,7 @@ export default function ProjectsSection() {
             title: "Tic Tac Toe - Browser-Based Game Implementation",
             imageSrc: ticTacToe,
             githubLink: `https://github.com/joeshawky/odin-tic-tac-toe`,
-            demoLink: `https://joeshawky.github.io/TOP-tic-tac-toe/`,
+            demoLink: `https://joeshawky.github.io/odin-tic-tac-toe/`,
             description: `Developed a fully interactive Tic Tac Toe game 
             using HTML, CSS, and vanilla JavaScript as part of The Odin 
             Project web development curriculum. The project focuses on 
