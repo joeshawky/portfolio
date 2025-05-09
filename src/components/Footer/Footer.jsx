@@ -7,6 +7,7 @@ export default function Footer() {
                 className={styles.footerSvgMain}
                 viewBox="0 0 1440 646"
                 fill="none"
+                preserveAspectRatio="none"
             >
                 <g filter="url(#filter0_i_16_16)">
                     <path
@@ -65,7 +66,7 @@ export default function Footer() {
                 </defs>
             </svg>
 
-            <svg className={styles.footerSvgLeftOne} viewBox="0 0 338 142" fill="none">
+            <svg className={styles.footerSvgLeftOne} viewBox="0 0 338 142" fill="none" preserveAspectRatio="none">
                 <path
                     d="M1 141L337 1L155 141H1Z"
                     fill="#D9D9D9"
@@ -73,7 +74,7 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg className={styles.footerSvgLeftTwo} viewBox="0 0 146 78" fill="none">
+            <svg className={styles.footerSvgLeftTwo} viewBox="0 0 146 78" fill="none" preserveAspectRatio="none">
                 <path
                     d="M49 57L145 1L73 77H1L49 57Z"
                     fill="#D9D9D9"
@@ -81,10 +82,10 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg
-                className={styles.footerSvgLeftThree}
+            <svg className={styles.footerSvgLeftThree}
                 viewBox="0 0 178 182"
                 fill="none"
+                preserveAspectRatio="none"
             >
                 <path
                     d="M2 180L177 1L103 150L2 180Z"
@@ -93,10 +94,10 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg
-                className={styles.footerSvgLeftFour}
+            <svg className={styles.footerSvgLeftFour}
                 viewBox="0 0 128 141"
                 fill="none"
+                preserveAspectRatio="none"
             >
                 <path
                     d="M13 140L127 1L1 107L13 140Z"

@@ -41,7 +41,7 @@ export default function SkillsSection() {
     useEffect(() => {
         const refs = imagesWithRefs.map(i => i.ref);
         initializeIconsAnimation(refs);
-    }, []);
+    }, [width]);
 
     return (
         <section className={styles.skillsSection}>

@@ -3,12 +3,11 @@ import locationImage from "../../assets/icons/location.png";
 import styles from "./styles.module.css";
 
 export default function HeroSection() {
-    const nameSurname = "Youssef Essam"
-    const position = "Software Developer"
-    const location = "Istanbul, Turkey"
+    const nameSurname = "Youssef Essam";
+    const position = "Software Developer";
+    const location = "Istanbul, Turkey";
     const description = `From a hobby to a way of maintaining life. The code has become a
-                part of me`
-
+                part of me`;
 
     return (
         <section className={styles.hero}>
@@ -21,9 +20,7 @@ export default function HeroSection() {
                 <img className={styles.locationIcon} src={locationImage} />
                 <p className={styles.heroLocation}>{location}</p>
             </div>
-            <p className={styles.heroDescription}>
-                {description}
-            </p>
+            <p className={styles.heroDescription}>{description}</p>
             <button className={styles.heroButton}>View Projects</button>
         </section>
     );

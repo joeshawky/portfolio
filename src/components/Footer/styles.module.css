@@ -4,7 +4,9 @@
 }
 
 .footerSvgMain {
-    transform: translateY(5vw);
+    /* transform: translateY(5vw); */
+    width: 100%;;
+    max-height: min(40vw, 50vh);
 }
 
 .footerSvgLeftOne {
@@ -16,21 +18,21 @@
 
 .footerSvgLeftTwo {
     position: absolute;
-    left: 10%;
-    width: 10%;
-    top: 25%;
+    left: 0;
+    transform: translate(150%, 150%);
+    max-height: 5vw;
 }
 
 .footerSvgLeftThree {
     position: absolute;
-    left: 25%;
-    width: 15%;
-    top: 5%;
+    left: 0;
+    transform: translate(250%, -4vw);
+    max-height: 15vw;
 }
 
 .footerSvgLeftFour {
     position: absolute;
-    right: 20%;
-    top: -10%;
-    width: 20%;
+    right: 0;
+    transform: translate(-120%, -60%);
+    max-height: 20vw;
 }
