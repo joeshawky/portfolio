@@ -67,7 +67,9 @@ function Card({ row, position, companyName, tasks, isLeft = false }) {
                 gridColumn: `${isLeft ? `1 / span 1` : `3 / span 1`}`,
                 borderLeft: `${isLeft ? `2px solid white` : ""}`,
                 borderRight: `${isLeft ? `` : "2px solid white"}`,
-                background: `linear-gradient(to ${isLeft ? 'left' : 'right'}, #0F0F15, rgba(255, 255, 255, 0.05))`
+                background: `linear-gradient(to ${
+                    isLeft ? "left" : "right"
+                }, #0F0F15, rgba(255, 255, 255, 0.05))`,
             }}
         >
             <h1 className={styles.position}>{position}</h1>
@@ -81,13 +83,7 @@ function Card({ row, position, companyName, tasks, isLeft = false }) {
             </p>
             <ul className={styles.tasks}>
                 {tasks.map((task, idx) => (
-                    <li
-                        key={idx}
-                        className={styles.task}
-                        style={{
-                            textAlign: isLeft ? "left" : "right",
-                        }}
-                    >
+                    <li key={idx} className={styles.task}>
                         {task}
                     </li>
                 ))}
@@ -100,12 +96,12 @@ export default function ExperienceSection() {
     const experiences = [
         {
             companyName: "Letna Marine",
-            position: "Software Engineer",
+            position: "Software Developer",
             date: "feb 2023 - current",
             tasks: [
-                "Control system for ROVs.",
-                "Control system for ROVs.",
-                "Control system for ROVs.",
+                `Developed new features in Pyrot (QGroundControl) using C++ and QML with the Qt Framework.`,
+                `Added support for multi-camera streaming, audio recording, and custom sensors.`,
+                `Redesigned the user interface to improve ROV operator experience and clarity.`,
             ],
             isLeft: true,
         },
@@ -114,9 +110,9 @@ export default function ExperienceSection() {
             position: "Software Developer",
             date: "jan 2022 - jun 2022",
             tasks: [
-                "Control system for ROVs.",
-                "Control system for ROVs.",
-                "Control system for ROVs.",
+                "Developed Python scripts for real-time image recognition to detect red-colored targets.",
+                "Implemented GPS geolocation and automated target coordinate transmission.",
+                "Contributed to UAV navigation and payload drop system during flight missions.",
             ],
             isLeft: false,
         },
@@ -126,48 +122,62 @@ export default function ExperienceSection() {
         <section className={styles.experience}>
             <Svgs />
             <div className={styles.content}>
-            <h2 className={styles.title}>EXPERIENCE</h2>
-            <div className={styles.timeline}>
-                <div className={styles.timelineMidLine}></div>
+                <h2 className={styles.title}>EXPERIENCE</h2>
+                <div className={styles.timeline}>
+                    <div className={styles.timelineMidLine}></div>
 
-                {experiences.map((experience, index) => (
-                    <>
-                        <Card
-                            position={experience.position}
-                            companyName={experience.companyName}
-                            row={index + 1}
-                            tasks={experience.tasks}
-                            isLeft={experience.isLeft}
-                            key={index}
-                        />
-
-                        <div
-                            className={`${styles.circle} ${
-                                experience.isLeft
-                                    ? styles.circleLeft
-                                    : styles.circleRight
-                            }`}
-                            style={{ gridRow: `${index + 1} / span 1` }}
-                        ></div>
-                        <p
-                            className={styles.timelineDate}
-                            style={{
-                                gridRow: `${index + 1} / span 1`,
-                                gridColumn: `${
-                                    experience.isLeft
-                                        ? `3 / span 1`
-                                        : `1 / span 1`
-                                }`,
-                            }}
-                        >
-                            {experience.date}
-                        </p>
-                    </>
-                ))}
+                    {experiences.map((experience, index) => (
+                        <>
+                            <Card
+                                position={experience.position}
+                                companyName={experience.companyName}
+                                row={index + 1}
+                                tasks={experience.tasks}
+                                isLeft={experience.isLeft}
+                                key={index}
+                            />
+                            {experience.isLeft ? (
+                                <>
+                                    <div
+                                        className={`${styles.circle} ${styles.circleLeft}`}
+                                        style={{
+                                            gridRow: `${index + 1} / span 1`,
+                                        }}
+                                    ></div>
+                                    <p
+                                        className={styles.timelineDate}
+                                        style={{
+                                            gridRow: `${index + 1} / span 1`,
+                                            gridColumn: `${`3 / span 1`}`,
+                                        }}
+                                    >
+                                        {experience.date}
+                                    </p>
+                                </>
+                            ) : (
+                                <>
+                                    <div
+                                        className={`${styles.circle} ${styles.circleRight}`}
+                                        style={{
+                                            gridRow: `${index + 1} / span 1`,
+                                        }}
+                                    ></div>
+                                    <p
+                                        className={styles.timelineDate}
+                                        style={{
+                                            gridRow: `${index + 1} / span 1`,
+                                            gridColumn: `${`1 / span 1`}`,
+                                        }}
+                                    >
+                                        {experience.date}
+                                    </p>
+                                </>
+                            )}
+                        </>
+                    ))}
+                </div>
+                <p className={styles.toBeContinued}>To be continued...</p>
             </div>
-            <p className={styles.toBeContinued}>To be continued...</p>
-            </div>
-            
         </section>
     );
 }
