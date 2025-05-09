@@ -98,7 +98,7 @@ export default function ProjectsSection() {
             title: "Memory Card Game - React-Based Score Challenge",
             imageSrc: memoryCardGame,
             githubLink: `https://github.com/joeshawky/odin-memory-card`,
-            // demoLink: `https://project.demo.com`, // No demo link for memory card, should be added in the future
+            demoLink: `https://joeshawky.github.io/odin-memory-card/`, 
             description: `Built an interactive memory card game using 
             React as part of The Odin Project web development curriculum. 
             The game challenges users to click on unique cards without 
@@ -107,19 +107,6 @@ export default function ProjectsSection() {
             with React hooks, score tracking, and responsive card layout.`,
         },
     ];
-
-    // const projects = Array(5)
-    //     .fill()
-    //     .map((_, i) => ({
-    //         title: "My project",
-    //         imageSrc: projectOne,
-    //         githubLink: `https://github.com/yourusername/project`,
-    //         demoLink: `https://project.demo.com`,
-    //         description: `lorem ipsum uit amet connected samia dosti
-    //                                 Lorem ipsum dolor sit amet consectetur
-    //                                 adipisicing elit. Veniam fugit nostrum sunt
-    //                                 voluptates incidunt ab cumque enim nemo`,
-    //     }));
 
     return (
         <section id="projects" className={styles.projects}>
