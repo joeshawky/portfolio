@@ -15,12 +15,6 @@
   --experience-gap: min(2rem, 4vw);
 }
 
-
-@media only screen and (max-width: 600px) {
-  :root {}
-
-}
-
 .app {
   background-color: #08090E;
   color: white;
@@ -29,25 +23,3 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
-
-
-.mountains {
-  min-height: 100vh;
-}
-
-.experience h2 {
-  margin-top: 4rem;
-  letter-spacing: 0.2em;
-}
-
-
-
-
-.mountains {
-  background: url('/mountains-placeholder.png');
-  background-size: cover;
-  height: 200px;
-}
-
-
