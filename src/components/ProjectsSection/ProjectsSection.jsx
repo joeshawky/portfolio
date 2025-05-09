@@ -36,11 +36,7 @@ function Svgs() {
                     </linearGradient>
                 </defs>
             </svg>
-            <svg
-                className={styles.svgFour}
-                viewBox="0 0 1440 1547"
-                fill="none"
-            >
+            <svg className={styles.svgFour} viewBox="0 0 1440 1547" fill="none">
                 <path
                     d="M1471 14.3675C1471 14.3675 1363.87 -27.3542 1235.42 31.3967C1106.96 90.1477 998.056 181.46 838.097 207.649C641.839 239.781 499.196 150.885 335.726 122.503C172.256 94.1211 -124 292.796 -124 292.796V1331.58V1547C-124 1547 78.7018 1430.17 214.034 1399.7C456.36 1345.13 596.881 1553.86 838.097 1487.4C1006.91 1440.88 1086.08 1321.52 1251.02 1246.43C1332.13 1209.51 1460.6 1163.84 1460.6 1163.84L1471 14.3675Z"
                     fill="url(#paint0_linear_24_14)"
@@ -82,6 +78,7 @@ export default function ProjectsSection() {
             redesigned user interface to optimize operator workflow and 
             mission clarity. The application was developed using the Qt 
             Framework, with QML for the frontend and C++ for backend logic.`,
+            style: {},
         },
         {
             title: "Tic Tac Toe - Browser-Based Game Implementation",
@@ -98,7 +95,7 @@ export default function ProjectsSection() {
             title: "Memory Card Game - React-Based Score Challenge",
             imageSrc: memoryCardGame,
             githubLink: `https://github.com/joeshawky/odin-memory-card`,
-            demoLink: `https://joeshawky.github.io/odin-memory-card/`, 
+            demoLink: `https://joeshawky.github.io/odin-memory-card/`,
             description: `Built an interactive memory card game using 
             React as part of The Odin Project web development curriculum. 
             The game challenges users to click on unique cards without 
@@ -119,26 +116,32 @@ export default function ProjectsSection() {
                             src={project.imageSrc}
                             className={styles.cardImage}
                         />
-                        <p className={styles.description}>
-                            {project.description}
-                        </p>
+                            <p className={styles.description}>
+                                {project.description}
+                            </p>
                         <h3 className={styles.projectTitle}>{project.title}</h3>
                         <div className={styles.anchors}>
-                            
-                            {project.githubLink && <img
-                                src={code}
-                                className={styles.codeLink}
-                                onClick={() =>
-                                    window.open(project.githubLink, "_blank")
-                                }
-                            />}
-                            {project.demoLink && <img
-                                src={redirect}
-                                className={styles.redirectLink}
-                                onClick={() =>
-                                    window.open(project.demoLink, "_blank")
-                                }
-                            />}
+                            {project.githubLink && (
+                                <img
+                                    src={code}
+                                    className={styles.codeLink}
+                                    onClick={() =>
+                                        window.open(
+                                            project.githubLink,
+                                            "_blank"
+                                        )
+                                    }
+                                />
+                            )}
+                            {project.demoLink && (
+                                <img
+                                    src={redirect}
+                                    className={styles.redirectLink}
+                                    onClick={() =>
+                                        window.open(project.demoLink, "_blank")
+                                    }
+                                />
+                            )}
                         </div>
                     </div>
                 ))}

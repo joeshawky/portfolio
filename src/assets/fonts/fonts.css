@@ -1,27 +1,34 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('./Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
+  font-family: 'Inter';
+  src: url('./Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('./Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: italic;
+  font-family: 'Inter';
+  src: url('./Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'sansation-light';
-    src: url('./Sansation/Sansation-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'sansation-regular';
-    src: url('./Sansation/Sansation-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: 'sansation-light';
+  src: url('./Sansation/Sansation-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sansation-regular';
+  src: url('./Sansation/Sansation-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sansation-bold';
+  src: url('./Sansation/Sansation-Bold.ttf') format('truetype');
+  /* font-weight: 400; */
+  font-style: normal;
+}

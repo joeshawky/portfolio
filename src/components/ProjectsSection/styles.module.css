@@ -71,17 +71,16 @@
     top: 0;
     left: 0;
     z-index: -1;
-    height: 100%;
     width: 100%;
-    object-fit: contain; /* ASK LITA - cover vs contain */
+    height: 100%;
     opacity: 0.5;
+    object-fit: cover;
     transition: opacity 0.3s ease;
 }
 
-
 .description {
-    font-family: 'sansation';
-    padding: 1rem .5rem;
+    font-family: 'sansation-bold';
+    padding: 1.5rem .5rem;
     font-weight: bold;
     letter-spacing: .15rem;
     opacity: 0;
@@ -92,9 +91,10 @@
     scroll-behavior: smooth;
     transition: opacity 0.3s ease;
     text-align: left;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-  
 .projectTitle {
     margin-top: auto;
     font-family: 'inter';
