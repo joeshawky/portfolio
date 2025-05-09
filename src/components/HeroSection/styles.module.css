@@ -4,7 +4,6 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 10rem;
-    min-height: 75vh;
     z-index: 1;
 }
 
@@ -40,6 +39,7 @@
     font-size: var(--fs-5);
     font-weight: 300;
     font-family: 'sansation-regular', sans-serif;
+    padding-inline: 1rem;
 }
 
 .heroSubtitle {
