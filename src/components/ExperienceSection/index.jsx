@@ -58,7 +58,7 @@ function Svgs() {
     );
 }
 
-function Card({ row, position, companyName, tasks, isLeft = false }) {
+function Card({ row, position, companyName, tasks, isLeft = false, date}) {
     return (
         <div
             className={`${styles.timelineBox} ${isLeft ? styles.boxLeft : styles.boxRight}`}
@@ -67,15 +67,22 @@ function Card({ row, position, companyName, tasks, isLeft = false }) {
             }}
         >
             <h1 className={styles.position}>{position}</h1>
-            <p
-                className={styles.companyName}
-                style={{
-                    // alignSelf: isLeft ? "flex-end" : "flex-start",
-                    alignSelf: "flex-start",
-                }}
-            >
-                {companyName}
-            </p>
+            <div className={styles.companyNameDate}>
+                <p
+                    className={styles.companyName}
+                    style={{
+                        // alignSelf: isLeft ? "flex-end" : "flex-start",
+                        alignSelf: "flex-start",
+                    }}
+                >
+                    {companyName}
+                </p>
+
+                <p className={styles.companyDate}>
+                    {date}
+                </p>
+
+            </div>
             <ul className={styles.tasks}>
                 {tasks.map((task, idx) => (
                     <li key={idx} className={styles.task}>
@@ -129,6 +136,7 @@ export default function ExperienceSection() {
                                 row={index + 1}
                                 tasks={experience.tasks}
                                 isLeft={experience.isLeft}
+                                date={experience.date}
                                 key={index}
                             />
                             {experience.isLeft ? (
