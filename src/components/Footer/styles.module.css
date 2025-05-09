@@ -1,0 +1,36 @@
+.footer {
+    position: relative;
+    margin-top: 15rem;
+}
+
+.footerSvgMain {
+    transform: translateY(5vw);
+}
+
+.footerSvgLeftOne {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    top: 15%;
+}
+
+.footerSvgLeftTwo {
+    position: absolute;
+    left: 10%;
+    width: 10%;
+    top: 25%;
+}
+
+.footerSvgLeftThree {
+    position: absolute;
+    left: 25%;
+    width: 15%;
+    top: 5%;
+}
+
+.footerSvgLeftFour {
+    position: absolute;
+    right: 20%;
+    top: -10%;
+    width: 20%;
+}
