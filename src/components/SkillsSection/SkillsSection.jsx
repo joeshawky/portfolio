@@ -8,8 +8,7 @@ import jsImage from "../../assets/icons/js.png";
 import reactImage from "../../assets/icons/react.png";
 import qtImage from "../../assets/icons/qt.png";
 
-import styles from './styles.module.css'
-
+import styles from "./styles.module.css";
 
 function initializeIconsAnimation(refs) {
     refs.forEach((ref, i) => {
@@ -29,7 +28,6 @@ function initializeIconsAnimation(refs) {
 }
 
 export default function SkillsSection() {
-
     const imagesWithRefs = [
         { src: cplusplusImage, ref: useRef() },
         { src: jsImage, ref: useRef() },
@@ -41,7 +39,7 @@ export default function SkillsSection() {
     const width = useWindowWidth();
 
     useEffect(() => {
-        const refs = imagesWithRefs.map(i => i.ref);
+        const refs = imagesWithRefs.map((i) => i.ref);
         initializeIconsAnimation(refs);
     }, [width]);
 
@@ -52,8 +50,6 @@ export default function SkillsSection() {
                 className={styles.svgSkills}
                 viewBox="0 0 1440 486"
                 fill="none"
-                width="100%"
-                height="100%"
                 preserveAspectRatio="none"
             >
                 <path
@@ -63,8 +59,8 @@ export default function SkillsSection() {
                 <path
                     id="skillsPath"
                     d="M1494.5 1.50001C1494.5 1.50001 1373.45 -7.25679 1245 45C1116.55 97.2568 999.96 191.706 840 215C643.743 243.58 503.47 160.245 340 135C176.53 109.755 -78 266 -78 266"
-                    // stroke="red"
-                    // strokeWidth={"5px"}
+                    stroke="red"
+                    strokeWidth={"5px"}
                     transform="translate(0, 125)"
                 />
             </svg>
@@ -75,6 +71,8 @@ export default function SkillsSection() {
                     </div>
                 ))}
             </div>
+
+            
         </section>
     );
 }

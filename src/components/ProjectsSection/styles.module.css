@@ -124,17 +124,10 @@
 
 .svgThree {
     position: absolute;
-    top: 30vh;
-    left: 0;
-    width: 120%;
-    z-index: -2;
-}
-
-.svgFour {
-    position: absolute;
-    /* top: -20vh; */
-    top: -20vh;
+    top: 0;
     left: 0;
     width: 100%;
-    z-index: -1;
+    max-height: 100vh;
+
+    z-index: -2;
 }
