@@ -30,7 +30,7 @@
 }
 
 .iconImg {
-    width: clamp(30px, 7vw, 120px);
+    width: clamp(30px, 10vw, 120px);
     height: auto;
     margin: 0 2rem;
 }

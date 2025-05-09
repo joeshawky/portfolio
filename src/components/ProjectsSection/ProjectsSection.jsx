@@ -6,41 +6,6 @@ import pyrot from "../../assets/images/pyrot.png";
 import ticTacToe from "../../assets/images/ticTacToe.png";
 import memoryCardGame from "../../assets/images/memoryCardGame.png";
 
-function Svgs() {
-    return (
-        <>
-            <svg
-                className={styles.svgThree}
-                viewBox="0 0 1440 1376"
-                fill="none"
-                preserveAspectRatio="none"
-            >
-                <path
-                    d="M1478 12.7794C1478 12.7794 1370.87 -24.3305 1242.42 27.9263C1113.96 80.183 1005.06 161.402 845.096 184.697C648.839 213.277 506.196 134.207 342.726 108.962C179.256 83.7173 -117 260.431 -117 260.431V1184.39V1376C-117 1376 85.7018 1272.09 221.034 1244.98C463.36 1196.44 603.881 1382.11 845.096 1322.99C1013.91 1281.61 1093.08 1175.44 1258.02 1108.66C1339.13 1075.82 1467.6 1035.19 1467.6 1035.19L1478 12.7794Z"
-                    fill="url(#paint0_linear_24_13)"
-                />
-                <defs>
-                    <linearGradient
-                        id="paint0_linear_24_13"
-                        x1="680.5"
-                        y1="0"
-                        x2="680.5"
-                        y2="1376"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#0B0A10" />
-                        <stop offset="0.5" stop-color="#08090E" />
-                        <stop offset="1" stop-color="#100F16" />
-                        {/* <stop stop-color="#00F" /> */}
-                        {/* <stop offset="0.5" stop-color="#00F" /> */}
-                        {/* <stop offset="1" stop-color="#00F" /> */}
-                    </linearGradient>
-                </defs>
-            </svg>
-        </>
-    );
-}
-
 export default function ProjectsSection() {
     const projects = [
         {
@@ -85,7 +50,34 @@ export default function ProjectsSection() {
 
     return (
         <section id="projects" className={styles.projects}>
-            <Svgs />
+            <svg
+                className={styles.svgThree}
+                viewBox="0 0 1440 1376"
+                fill="none"
+                preserveAspectRatio="none"
+            >
+                <path
+                    d="M1478 12.7794C1478 12.7794 1370.87 -24.3305 1242.42 27.9263C1113.96 80.183 1005.06 161.402 845.096 184.697C648.839 213.277 506.196 134.207 342.726 108.962C179.256 83.7173 -117 260.431 -117 260.431V1184.39V1376C-117 1376 85.7018 1272.09 221.034 1244.98C463.36 1196.44 603.881 1382.11 845.096 1322.99C1013.91 1281.61 1093.08 1175.44 1258.02 1108.66C1339.13 1075.82 1467.6 1035.19 1467.6 1035.19L1478 12.7794Z"
+                    fill="url(#paint0_linear_24_13)"
+                />
+                <defs>
+                    <linearGradient
+                        id="paint0_linear_24_13"
+                        x1="680.5"
+                        y1="0"
+                        x2="680.5"
+                        y2="1376"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#0B0A10" />
+                        <stop offset="0.5" stop-color="#08090E" />
+                        <stop offset="1" stop-color="#100F16" />
+                        {/* <stop stop-color="#00F" /> */}
+                        {/* <stop offset="0.5" stop-color="#00F" /> */}
+                        {/* <stop offset="1" stop-color="#00F" /> */}
+                    </linearGradient>
+                </defs>
+            </svg>
             <h2>PROJECTS</h2>
             <div className={styles.projectCards}>
                 {projects.map((project, index) => (
