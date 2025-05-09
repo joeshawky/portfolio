@@ -61,22 +61,17 @@ function Svgs() {
 function Card({ row, position, companyName, tasks, isLeft = false }) {
     return (
         <div
-            className={styles.timelineBox}
+            className={`${styles.timelineBox} ${isLeft ? styles.boxLeft : styles.boxRight}`}
             style={{
-                gridRow: `${row} / span 1`,
-                gridColumn: `${isLeft ? `1 / span 1` : `3 / span 1`}`,
-                borderLeft: `${isLeft ? `2px solid white` : ""}`,
-                borderRight: `${isLeft ? `` : "2px solid white"}`,
-                background: `linear-gradient(to ${
-                    isLeft ? "left" : "right"
-                }, #0F0F15, rgba(255, 255, 255, 0.05))`,
+                gridRow: `${row} / span 1`
             }}
         >
             <h1 className={styles.position}>{position}</h1>
             <p
                 className={styles.companyName}
                 style={{
-                    alignSelf: isLeft ? "flex-end" : "flex-start",
+                    // alignSelf: isLeft ? "flex-end" : "flex-start",
+                    alignSelf: "flex-start",
                 }}
             >
                 {companyName}
