@@ -6,6 +6,7 @@ import pythonImage from "../../assets/icons/python.png";
 import cplusplusImage from "../../assets/icons/cplusplus.png";
 import jsImage from "../../assets/icons/js.png";
 import reactImage from "../../assets/icons/react.png";
+import qtImage from "../../assets/icons/qt.png";
 
 import styles from './styles.module.css'
 
@@ -34,6 +35,7 @@ export default function SkillsSection() {
         { src: jsImage, ref: useRef() },
         { src: reactImage, ref: useRef() },
         { src: pythonImage, ref: useRef() },
+        { src: qtImage, ref: useRef() },
     ];
 
     const width = useWindowWidth();

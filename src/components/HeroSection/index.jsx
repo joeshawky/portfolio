@@ -6,8 +6,19 @@ export default function HeroSection() {
     const nameSurname = "Youssef Essam";
     const position = "Software Developer";
     const location = "Istanbul, Turkey";
-    const description = `From a hobby to a way of maintaining life. The code has become a
-                part of me`;
+    // const description = `From a hobby to a way of maintaining life. The code has become a
+    //             part of me`;
+    const description = `Full-stack development focused on performance, 
+    clarity, and usability.
+
+`;
+
+    const handleScroll = () => {
+        const section = document.getElementById("projects");
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     return (
         <section className={styles.hero}>
@@ -21,7 +32,7 @@ export default function HeroSection() {
                 <p className={styles.heroLocation}>{location}</p>
             </div>
             <p className={styles.heroDescription}>{description}</p>
-            <button className={styles.heroButton}>View Projects</button>
+            <button className={styles.heroButton} onClick={handleScroll}>View Projects</button>
         </section>
     );
 }

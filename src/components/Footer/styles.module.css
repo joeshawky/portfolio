@@ -36,3 +36,17 @@
     transform: translate(-120%, -60%);
     max-height: 20vw;
 }
+
+.socials {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 1vw, 1rem);
+}
+
+.icon {
+    width: clamp(16px, 8vw, 60px);
+    cursor: pointer;
+}

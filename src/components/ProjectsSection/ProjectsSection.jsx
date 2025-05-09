@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./styles.module.css";
-import projectOne from "../../assets/images/projectOne.png";
 import code from "../../assets/images/code.svg";
 import redirect from "../../assets/images/topRight.svg";
+import pyrot from "../../assets/images/pyrot.png";
+import ticTacToe from "../../assets/images/ticTacToe.png";
+import memoryCardGame from "../../assets/images/memoryCardGame.png";
 
 function Svgs() {
     return (
@@ -68,21 +70,61 @@ function Svgs() {
 }
 
 export default function ProjectsSection() {
-    const projects = Array(5)
-        .fill()
-        .map((_, i) => ({
-            title: "My project",
-            imageSrc: projectOne,
-            githubLink: `https://github.com/yourusername/project`,
-            demoLink: `https://project.demo.com`,
-            description: `lorem ipsum uit amet connected samia dosti
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Veniam fugit nostrum sunt
-                                    voluptates incidunt ab cumque enim nemo`,
-        }));
+    const projects = [
+        {
+            title: "Customized Pyrot (QGroundControl) for Underwater ROV Operations",
+            imageSrc: pyrot,
+            // githubLink: `https://github.com/yourusername/project`,
+            // demoLink: `https://project.demo.com`,
+            description: `Forked and customized the open-source Pyrot 
+            (formerly QGroundControl) ground control software to meet 
+            the operational needs of Lenta Marine's underwater ROV systems.
+            Implemented advanced features including multi-camera streaming, 
+            audio recording, integration of custom sensors, and a fully 
+            redesigned user interface to optimize operator workflow and 
+            mission clarity. The application was developed using the Qt 
+            Framework, with QML for the frontend and C++ for backend logic.`,
+        },
+        {
+            title: "Tic Tac Toe - Browser-Based Game Implementation",
+            imageSrc: ticTacToe,
+            githubLink: `https://github.com/joeshawky/odin-tic-tac-toe`,
+            demoLink: `https://joeshawky.github.io/TOP-tic-tac-toe/`,
+            description: `Developed a fully interactive Tic Tac Toe game 
+            using HTML, CSS, and vanilla JavaScript as part of The Odin 
+            Project web development curriculum. The project focuses on 
+            DOM manipulation, game logic implementation, and responsive 
+            layout without relying on external libraries or frameworks.`,
+        },
+        {
+            title: "Memory Card Game - React-Based Score Challenge",
+            imageSrc: memoryCardGame,
+            githubLink: `https://github.com/joeshawky/odin-memory-card`,
+            // demoLink: `https://project.demo.com`, // No demo link for memory card, should be added in the future
+            description: `Built an interactive memory card game using 
+            React as part of The Odin Project web development curriculum. 
+            The game challenges users to click on unique cards without 
+            repetition, with cards being shuffled after each round to 
+            increase difficulty. Features include dynamic state management
+            with React hooks, score tracking, and responsive card layout.`,
+        },
+    ];
+
+    // const projects = Array(5)
+    //     .fill()
+    //     .map((_, i) => ({
+    //         title: "My project",
+    //         imageSrc: projectOne,
+    //         githubLink: `https://github.com/yourusername/project`,
+    //         demoLink: `https://project.demo.com`,
+    //         description: `lorem ipsum uit amet connected samia dosti
+    //                                 Lorem ipsum dolor sit amet consectetur
+    //                                 adipisicing elit. Veniam fugit nostrum sunt
+    //                                 voluptates incidunt ab cumque enim nemo`,
+    //     }));
 
     return (
-        <section className={styles.projects}>
+        <section id="projects" className={styles.projects}>
             <Svgs />
             <h2>PROJECTS</h2>
             <div className={styles.projectCards}>
@@ -97,20 +139,21 @@ export default function ProjectsSection() {
                         </p>
                         <h3 className={styles.projectTitle}>{project.title}</h3>
                         <div className={styles.anchors}>
-                            <img
+                            
+                            {project.githubLink && <img
                                 src={code}
                                 className={styles.codeLink}
                                 onClick={() =>
                                     window.open(project.githubLink, "_blank")
                                 }
-                            />
-                            <img
+                            />}
+                            {project.demoLink && <img
                                 src={redirect}
                                 className={styles.redirectLink}
                                 onClick={() =>
                                     window.open(project.demoLink, "_blank")
                                 }
-                            />
+                            />}
                         </div>
                     </div>
                 ))}

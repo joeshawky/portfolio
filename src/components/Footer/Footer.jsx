@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./styles.module.css";
-export default function Footer() {
+import linkedinIcon from "../../assets/icons/linkedin.png";
+import githubIcon from "../../assets/icons/github.png";
+
+function Svgs() {
     return (
-        <footer className={styles.footer}>
+        <>
             <svg
                 className={styles.footerSvgMain}
                 viewBox="0 0 1440 646"
@@ -66,7 +69,12 @@ export default function Footer() {
                 </defs>
             </svg>
 
-            <svg className={styles.footerSvgLeftOne} viewBox="0 0 338 142" fill="none" preserveAspectRatio="none">
+            <svg
+                className={styles.footerSvgLeftOne}
+                viewBox="0 0 338 142"
+                fill="none"
+                preserveAspectRatio="none"
+            >
                 <path
                     d="M1 141L337 1L155 141H1Z"
                     fill="#D9D9D9"
@@ -74,7 +82,12 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg className={styles.footerSvgLeftTwo} viewBox="0 0 146 78" fill="none" preserveAspectRatio="none">
+            <svg
+                className={styles.footerSvgLeftTwo}
+                viewBox="0 0 146 78"
+                fill="none"
+                preserveAspectRatio="none"
+            >
                 <path
                     d="M49 57L145 1L73 77H1L49 57Z"
                     fill="#D9D9D9"
@@ -82,7 +95,8 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg className={styles.footerSvgLeftThree}
+            <svg
+                className={styles.footerSvgLeftThree}
                 viewBox="0 0 178 182"
                 fill="none"
                 preserveAspectRatio="none"
@@ -94,7 +108,8 @@ export default function Footer() {
                 />
             </svg>
 
-            <svg className={styles.footerSvgLeftFour}
+            <svg
+                className={styles.footerSvgLeftFour}
                 viewBox="0 0 128 141"
                 fill="none"
                 preserveAspectRatio="none"
@@ -105,6 +120,29 @@ export default function Footer() {
                     stroke="black"
                 />
             </svg>
+        </>
+    );
+}
+
+export default function Footer() {
+    const linkedinUrl = "https://www.linkedin.com/in/youssef02/";
+    const githubUrl = "https://github.com/joeshawky";
+
+    return (
+        <footer className={styles.footer}>
+            <Svgs />
+            <div className={styles.socials}>
+                <img
+                    className={styles.icon}
+                    src={linkedinIcon}
+                    onClick={() => window.open(linkedinUrl, "_blank")}
+                />
+                <img
+                    className={styles.icon}
+                    src={githubIcon}
+                    onClick={() => window.open(githubUrl, "_blank")}
+                />
+            </div>
         </footer>
     );
 }

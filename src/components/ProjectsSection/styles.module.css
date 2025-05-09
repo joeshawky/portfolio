@@ -14,7 +14,7 @@
 
 .projectCards {
     margin: 2rem;
-    margin-top: 4rem;
+    margin-top: clamp(2rem, 8vw, 4rem);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     max-width: 1000px;
@@ -37,6 +37,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     gap: 0.5rem;
+    max-width: 320px;
+    max-height: 320px;
+    justify-self: center;
     /* box-shadow: 0 0 2px rgba(255, 255, 255, 0.2); */
     transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
@@ -55,7 +58,7 @@
 
 
 .projectCard:hover .cardImage {
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 .projectCard:hover .description {
@@ -70,7 +73,8 @@
     z-index: -1;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain; /* ASK LITA - cover vs contain */
+    opacity: 0.5;
     transition: opacity 0.3s ease;
 }
 
@@ -81,9 +85,16 @@
     font-weight: bold;
     letter-spacing: .15rem;
     opacity: 0;
+    max-height: 70%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 transparent;
+    scroll-behavior: smooth;
     transition: opacity 0.3s ease;
+    text-align: left;
 }
 
+  
 .projectTitle {
     margin-top: auto;
     font-family: 'inter';
