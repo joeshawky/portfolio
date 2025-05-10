@@ -5,7 +5,7 @@ import redirect from "../../assets/images/topRight.svg";
 import pyrot from "../../assets/images/pyrot.png";
 import ticTacToe from "../../assets/images/ticTacToe.png";
 import memoryCardGame from "../../assets/images/memoryCardGame.png";
-import kneeRehabUi from "../../assets/images/kneeRehabUi.png"
+import kneeRehabUi from "../../assets/images/kneeRehabUi.png";
 
 export default function ProjectsSection({ style }) {
     const projects = [

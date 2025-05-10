@@ -58,12 +58,14 @@ function Svgs() {
     );
 }
 
-function Card({ row, position, companyName, tasks, isLeft = false, date}) {
+function Card({ row, position, companyName, tasks, isLeft = false, date }) {
     return (
         <div
-            className={`${styles.timelineBox} ${isLeft ? styles.boxLeft : styles.boxRight}`}
+            className={`${styles.timelineBox} ${
+                isLeft ? styles.boxLeft : styles.boxRight
+            }`}
             style={{
-                gridRow: `${row} / span 1`
+                gridRow: `${row} / span 1`,
             }}
         >
             <h1 className={styles.position}>{position}</h1>
@@ -77,10 +79,7 @@ function Card({ row, position, companyName, tasks, isLeft = false, date}) {
                     {companyName}
                 </p>
 
-                <p className={styles.companyDate}>
-                    {date}
-                </p>
-
+                <p className={styles.companyDate}>{date}</p>
             </div>
             <ul className={styles.tasks}>
                 {tasks.map((task, idx) => (
@@ -93,7 +92,7 @@ function Card({ row, position, companyName, tasks, isLeft = false, date}) {
     );
 }
 
-export default function ExperienceSection({style}) {
+export default function ExperienceSection({ style }) {
     const experiences = [
         {
             companyName: "Letna Marine",

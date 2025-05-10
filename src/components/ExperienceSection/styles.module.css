@@ -128,6 +128,7 @@
 }
 
 @media screen and (max-width: 750px) {
+
     .circle,
     .timelineDate,
     .timelineMidLine {
@@ -193,7 +194,6 @@
 .task {
     text-align: left;
     font-family: 'inter';
-    /* font-size: 1rem; */
     font-size: var(--tasks-size);
     letter-spacing: 0.1rem;
 }
