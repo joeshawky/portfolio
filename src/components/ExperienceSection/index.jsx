@@ -100,7 +100,7 @@ export default function ExperienceSection({ style }) {
             date: "feb 2023 - current",
             tasks: [
                 "Extended an open-source ROV control application using C++ and QML with the Qt Framework.",
-                "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application."
+                "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application.",
                 `Redesigned the user interface to improve ROV operator experience and clarity.`,
             ],
             isLeft: true,
