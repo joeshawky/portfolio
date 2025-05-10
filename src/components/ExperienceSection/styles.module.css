@@ -5,12 +5,6 @@
     justify-items: center;
 }
 
-.experience h2 {
-    /* margin-top: 10rem; */
-    margin-block: 2rem;
-    letter-spacing: 0.2em;
-}
-
 .title {
     font-family: 'inter';
     font-weight: 400;
@@ -21,6 +15,9 @@
 
 .content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 
@@ -124,15 +121,19 @@
     background: linear-gradient(to right, #0F0F15, rgba(255, 255, 255, 0.05));
 }
 
+@media screen and (min-width: 750px) {
+    .companyDate {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 750px) {
     .circle,
-    .toBeContinued,
     .timelineDate,
     .timelineMidLine {
         display: none;
     }
-    
+
     .timeline {
         grid-template-columns: 1fr;
     }
@@ -158,10 +159,12 @@
 
 .timelineDate {
     font-family: 'inter';
-    /* font-size: 1.25rem; */
-    font-size: var(--to-be-continued);
-    letter-spacing: .1rem;
+    white-space: nowrap;
+    font-weight: 200;
+    font-size: var(--company-size);
+    font-style: italic;
     color: #FFFFFF;
+    text-align: end;
 }
 
 .position {
@@ -171,8 +174,6 @@
 }
 
 .companyName {
-    /* justify-self: center; */
-    /* align-self: flex-end; */
     font-family: 'inter';
     font-weight: 300;
     font-style: italic;
@@ -202,13 +203,4 @@
     flex-direction: column;
     gap: 1rem;
     padding-left: 1rem;
-}
-
-.toBeContinued {
-    font-family: 'inter';
-    font-style: italic;
-    /* font-size: 1.25rem; */
-    font-size: var(--to-be-continued);
-    letter-spacing: 0.15rem;
-    grid-column: 2 / span 1;
 }

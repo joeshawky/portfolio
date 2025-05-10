@@ -4,7 +4,6 @@
 }
 
 .footerSvgMain {
-    /* transform: translateY(5vw); */
     width: 100%;;
     max-height: min(40vw, 50vh);
 }

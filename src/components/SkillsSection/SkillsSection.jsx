@@ -27,7 +27,7 @@ function initializeIconsAnimation(refs) {
     });
 }
 
-export default function SkillsSection() {
+export default function SkillsSection({ style }) {
     const imagesWithRefs = [
         { src: cplusplusImage, ref: useRef() },
         { src: jsImage, ref: useRef() },
@@ -44,8 +44,8 @@ export default function SkillsSection() {
     }, [width]);
 
     return (
-        <section className={styles.skillsSection}>
-            <h2 className={styles.title}> SKILLS</h2>
+        <section className={styles.skillsSection} style={style}>
+            <h2 className={styles.title}>SKILLS</h2>
             <svg
                 className={styles.svgSkills}
                 viewBox="0 0 1440 486"
@@ -71,8 +71,6 @@ export default function SkillsSection() {
                     </div>
                 ))}
             </div>
-
-            
         </section>
     );
 }

@@ -71,7 +71,6 @@ function Card({ row, position, companyName, tasks, isLeft = false, date}) {
                 <p
                     className={styles.companyName}
                     style={{
-                        // alignSelf: isLeft ? "flex-end" : "flex-start",
                         alignSelf: "flex-start",
                     }}
                 >
@@ -94,7 +93,7 @@ function Card({ row, position, companyName, tasks, isLeft = false, date}) {
     );
 }
 
-export default function ExperienceSection() {
+export default function ExperienceSection({style}) {
     const experiences = [
         {
             companyName: "Letna Marine",
@@ -121,7 +120,7 @@ export default function ExperienceSection() {
     ];
 
     return (
-        <section className={styles.experience}>
+        <section className={styles.experience} style={style}>
             <Svgs />
             <div className={styles.content}>
                 <h2 className={styles.title}>EXPERIENCE</h2>
@@ -179,7 +178,6 @@ export default function ExperienceSection() {
                         </>
                     ))}
                 </div>
-                <p className={styles.toBeContinued}>To be continued...</p>
             </div>
         </section>
     );

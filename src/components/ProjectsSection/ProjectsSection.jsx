@@ -5,23 +5,38 @@ import redirect from "../../assets/images/topRight.svg";
 import pyrot from "../../assets/images/pyrot.png";
 import ticTacToe from "../../assets/images/ticTacToe.png";
 import memoryCardGame from "../../assets/images/memoryCardGame.png";
+import kneeRehabUi from "../../assets/images/kneeRehabUi.png"
 
-export default function ProjectsSection() {
+export default function ProjectsSection({ style }) {
     const projects = [
         {
-            title: "Customized Pyrot (QGroundControl) for Underwater ROV Operations",
+            title: "QGroundControl-Based Ground Station for ROV Operations",
             imageSrc: pyrot,
             // githubLink: `https://github.com/yourusername/project`,
             // demoLink: `https://project.demo.com`,
-            description: `Forked and customized the open-source Pyrot 
-            (formerly QGroundControl) ground control software to meet 
-            the operational needs of Lenta Marine's underwater ROV systems.
+            description: `Forked and customized the open-source QGroundControl 
+            ground control software to meet the operational needs of Lenta Marine's 
+            underwater ROV systems.
             Implemented advanced features including multi-camera streaming, 
             audio recording, integration of custom sensors, and a fully 
             redesigned user interface to optimize operator workflow and 
             mission clarity. The application was developed using the Qt 
             Framework, with QML for the frontend and C++ for backend logic.`,
-            style: {},
+        },
+        {
+            title: "Knee Rehab Robot Control App (Graduation Project)",
+            imageSrc: kneeRehabUi,
+            githubLink: `https://github.com/joeshawky/knee-rehab-app?tab=readme-ov-file`,
+            description: `A cross-platform Qt application (Qt 6.6.3) 
+            built with QML (frontend) and C++ (backend), developed 
+            as part of my graduation project for controlling a knee 
+            rehabilitation robot.
+
+            This application acts as the main user interface to 
+            communicate with a Raspberry Pi over Bluetooth, 
+            enabling real-time motor control and feedback. 
+            It is deployable on both desktop and Android thanks 
+            to the flexibility of the Qt Framework.`,
         },
         {
             title: "Tic Tac Toe - Browser-Based Game Implementation",
@@ -46,10 +61,22 @@ export default function ProjectsSection() {
             increase difficulty. Features include dynamic state management
             with React hooks, score tracking, and responsive card layout.`,
         },
+        {
+            title: "Memory Card Game - React-Based Score Challenge",
+            imageSrc: memoryCardGame,
+            githubLink: `https://github.com/joeshawky/odin-memory-card`,
+            demoLink: `https://joeshawky.github.io/odin-memory-card/`,
+            description: `Built an interactive memory card game using 
+            React as part of The Odin Project web development curriculum. 
+            The game challenges users to click on unique cards without 
+            repetition, with cards being shuffled after each round to 
+            increase difficulty. Features include dynamic state management
+            with React hooks, score tracking, and responsive card layout.`,
+        },
     ];
 
     return (
-        <section id="projects" className={styles.projects}>
+        <section id="projects" className={styles.projects} style={style}>
             <svg
                 className={styles.svgThree}
                 viewBox="0 0 1440 1376"
@@ -86,9 +113,9 @@ export default function ProjectsSection() {
                             src={project.imageSrc}
                             className={styles.cardImage}
                         />
-                            <p className={styles.description}>
-                                {project.description}
-                            </p>
+                        <p className={styles.description}>
+                            {project.description}
+                        </p>
                         <h3 className={styles.projectTitle}>{project.title}</h3>
                         <div className={styles.anchors}>
                             {project.githubLink && (

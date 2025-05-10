@@ -124,12 +124,12 @@ function Svgs() {
     );
 }
 
-export default function Footer() {
+export default function Footer({ style }) {
     const linkedinUrl = "https://www.linkedin.com/in/youssef02/";
     const githubUrl = "https://github.com/joeshawky";
 
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} style={style}>
             <Svgs />
             <div className={styles.socials}>
                 <img
