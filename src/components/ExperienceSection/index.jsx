@@ -112,7 +112,7 @@ export default function ExperienceSection({ style }) {
             tasks: [
                 "Developed Python scripts for real-time image recognition to detect red-colored targets.",
                 "Implemented GPS geolocation and automated target coordinate transmission.",
-                "Contributed to UAV navigation and payload drop system during flight missions.",
+                "Participated in the 2022 Teknofest UAV Competition as part of the flight software team.",
             ],
             isLeft: false,
         },
