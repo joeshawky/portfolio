@@ -1,7 +1,7 @@
 import React from "react";
 import locationImage from "../../assets/icons/location.png";
 import styles from "./styles.module.css";
-import cv from '../../assets/cv/Youssef_CV.pdf'
+// import cv from '/assets/cv/Youssef_CV.pdf'
 
 
 export default function HeroSection() {
@@ -15,19 +15,12 @@ export default function HeroSection() {
 
 `;
 
-    const handleScroll = () => {
+    const scrollToProjectsSection = () => {
         const section = document.getElementById("projects");
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
     };
-
-    const downloadCv = () => {
-        const link = document.createElement("a");
-        link.href = cv;
-        link.download = 'Youssef_Essam_CV.pdf';
-        link.click();
-    }
 
     return (
         <section className={styles.hero}>
@@ -41,9 +34,9 @@ export default function HeroSection() {
                 <p className={styles.heroLocation}>{location}</p>
             </div>
             <p className={styles.heroDescription}>{description}</p>
-            <button className={styles.heroButton} onClick={downloadCv}>
+            <a className={styles.heroButton} href="/assets/cv/Youssef_CV.pdf" download={"Youssef_Essam_CV.pdf"}>
                 Download CV
-            </button>
+            </a>
         </section>
     );
 }

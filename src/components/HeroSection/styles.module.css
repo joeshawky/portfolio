@@ -86,6 +86,7 @@
     border: 1px solid #787878;
     color: white;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease,
                 color 0.3s ease;
 }
