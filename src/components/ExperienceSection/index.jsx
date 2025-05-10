@@ -23,9 +23,9 @@ function Svgs() {
                         y2="1177.43"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stop-color="#0B0A10" />
-                        <stop offset="0.5" stop-color="#0D0E12" />
-                        <stop offset="1" stop-color="#100F16" />
+                        <stop stopColor="#0B0A10" />
+                        <stop offset="0.5" stopColor="#0D0E12" />
+                        <stop offset="1" stopColor="#100F16" />
                     </linearGradient>
                 </defs>
             </svg>
@@ -48,9 +48,9 @@ function Svgs() {
                         y2="1044.43"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stop-color="#0B0A10" />
-                        <stop offset="0.5" stop-color="#08090E" />
-                        <stop offset="1" stop-color="#100F16" />
+                        <stop stopColor="#0B0A10" />
+                        <stop offset="0.5" stopColor="#08090E" />
+                        <stop offset="1" stopColor="#100F16" />
                     </linearGradient>
                 </defs>
             </svg>
@@ -127,7 +127,7 @@ export default function ExperienceSection({ style }) {
                     <div className={styles.timelineMidLine}></div>
 
                     {experiences.map((experience, index) => (
-                        <>
+                        <React.Fragment key={index}>
                             <Card
                                 position={experience.position}
                                 companyName={experience.companyName}
@@ -135,7 +135,6 @@ export default function ExperienceSection({ style }) {
                                 tasks={experience.tasks}
                                 isLeft={experience.isLeft}
                                 date={experience.date}
-                                key={index}
                             />
                             {experience.isLeft ? (
                                 <>
@@ -174,7 +173,7 @@ export default function ExperienceSection({ style }) {
                                     </p>
                                 </>
                             )}
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

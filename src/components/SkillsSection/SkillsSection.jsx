@@ -66,7 +66,7 @@ export default function SkillsSection({ style }) {
             </svg>
             <div className={styles.content}>
                 {imagesWithRefs.map(({ src, ref }) => (
-                    <div className={styles.iconWrapper} ref={ref}>
+                    <div key={src} className={styles.iconWrapper} ref={ref}>
                         <img className={styles.iconImg} src={src} />
                     </div>
                 ))}

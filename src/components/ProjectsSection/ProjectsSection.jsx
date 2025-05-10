@@ -85,11 +85,11 @@ export default function ProjectsSection({ style }) {
                         gradientUnits="userSpaceOnUse"
                     >
                         <stop stopColor="#0B0A10" />
-                        <stop offset="0.5" stop-color="#08090E" />
-                        <stop offset="1" stop-color="#100F16" />
-                        {/* <stop stop-color="#00F" /> */}
-                        {/* <stop offset="0.5" stop-color="#00F" /> */}
-                        {/* <stop offset="1" stop-color="#00F" /> */}
+                        <stop offset="0.5" stopColor="#08090E" />
+                        <stop offset="1" stopColor="#100F16" />
+                        {/* <stop stopColor="#00F" /> */}
+                        {/* <stop offset="0.5" stopColor="#00F" /> */}
+                        {/* <stop offset="1" stopColor="#00F" /> */}
                     </linearGradient>
                 </defs>
             </svg>
