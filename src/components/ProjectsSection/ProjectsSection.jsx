@@ -61,18 +61,6 @@ export default function ProjectsSection({ style }) {
             increase difficulty. Features include dynamic state management
             with React hooks, score tracking, and responsive card layout.`,
         },
-        {
-            title: "Memory Card Game - React-Based Score Challenge",
-            imageSrc: memoryCardGame,
-            githubLink: `https://github.com/joeshawky/odin-memory-card`,
-            demoLink: `https://joeshawky.github.io/odin-memory-card/`,
-            description: `Built an interactive memory card game using 
-            React as part of The Odin Project web development curriculum. 
-            The game challenges users to click on unique cards without 
-            repetition, with cards being shuffled after each round to 
-            increase difficulty. Features include dynamic state management
-            with React hooks, score tracking, and responsive card layout.`,
-        },
     ];
 
     return (
