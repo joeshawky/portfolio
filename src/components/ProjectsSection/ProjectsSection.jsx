@@ -10,13 +10,14 @@ import kneeRehabUi from "../../assets/images/kneeRehabUi.png";
 export default function ProjectsSection({ style }) {
     const projects = [
         {
-            title: "QGroundControl-Based Ground Station for ROV Operations",
+            title: "Pyrot - QGroundControl Based Ground Station for ROV Operations",
             imageSrc: pyrot,
             // githubLink: `https://github.com/yourusername/project`,
             // demoLink: `https://project.demo.com`,
             description: `Forked and customized the open-source QGroundControl 
             ground control software to meet the operational needs of Lenta Marine's 
             underwater ROV systems.
+            
             Implemented advanced features including multi-camera streaming, 
             audio recording, integration of custom sensors, and a fully 
             redesigned user interface to optimize operator workflow and 
@@ -27,10 +28,12 @@ export default function ProjectsSection({ style }) {
             title: "Knee Rehab Robot Control App (Graduation Project)",
             imageSrc: kneeRehabUi,
             githubLink: `https://github.com/joeshawky/knee-rehab-app?tab=readme-ov-file`,
-            description: `A cross-platform Qt application (Qt 6.6.3) 
-            built with QML (frontend) and C++ (backend), developed 
+            description: `A cross-platform Qt application
+            built with QML on the frontend and C++ on the backend, developed 
             as part of my graduation project for controlling a knee 
-            rehabilitation robot.
+            rehabilitation robot. The project was accepted into the 
+            TÜBİTAK 2209-B Industry-Oriented Undergraduate Research 
+            Projects Support Program.
 
             This application acts as the main user interface to 
             communicate with a Raspberry Pi over Bluetooth, 
@@ -56,6 +59,7 @@ export default function ProjectsSection({ style }) {
             demoLink: `https://joeshawky.github.io/odin-memory-card/`,
             description: `Built an interactive memory card game using 
             React as part of The Odin Project web development curriculum. 
+            
             The game challenges users to click on unique cards without 
             repetition, with cards being shuffled after each round to 
             increase difficulty. Features include dynamic state management
