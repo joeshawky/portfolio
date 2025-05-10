@@ -1,6 +1,8 @@
 import React from "react";
 import locationImage from "../../assets/icons/location.png";
 import styles from "./styles.module.css";
+import cv from '../../assets/cv/Youssef_CV.pdf'
+
 
 export default function HeroSection() {
     const nameSurname = "Youssef Essam";
@@ -20,6 +22,13 @@ export default function HeroSection() {
         }
     };
 
+    const downloadCv = () => {
+        const link = document.createElement("a");
+        link.href = cv;
+        link.download = 'Youssef Essam CV.pdf';
+        link.click();
+    }
+
     return (
         <section className={styles.hero}>
             <div className={styles.heroCircle}></div>
@@ -32,7 +41,9 @@ export default function HeroSection() {
                 <p className={styles.heroLocation}>{location}</p>
             </div>
             <p className={styles.heroDescription}>{description}</p>
-            <button className={styles.heroButton} onClick={handleScroll}>View Projects</button>
+            <button className={styles.heroButton} onClick={downloadCv}>
+                Download CV
+            </button>
         </section>
     );
 }

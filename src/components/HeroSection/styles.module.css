@@ -86,4 +86,11 @@
     border: 1px solid #787878;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.heroButton:hover {
+    background-color: white;
+    color: black;
 }
