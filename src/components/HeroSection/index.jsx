@@ -25,7 +25,7 @@ export default function HeroSection() {
     const downloadCv = () => {
         const link = document.createElement("a");
         link.href = cv;
-        link.download = 'Youssef Essam CV.pdf';
+        link.download = 'Youssef_Essam_CV.pdf';
         link.click();
     }
 
