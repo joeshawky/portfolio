@@ -99,8 +99,8 @@ export default function ExperienceSection({ style }) {
             position: "Software Developer",
             date: "feb 2023 - current",
             tasks: [
-                `Developed new features in Pyrot (QGroundControl) using C++ and QML with the Qt Framework.`,
-                `Added support for multi-camera streaming, audio recording, and custom sensors.`,
+                "Extended an open-source ROV control application using C++ and QML with the Qt Framework.",
+                "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application."
                 `Redesigned the user interface to improve ROV operator experience and clarity.`,
             ],
             isLeft: true,
