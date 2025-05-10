@@ -6,6 +6,7 @@ import pyrot from "../../assets/images/pyrot.png";
 import ticTacToe from "../../assets/images/ticTacToe.png";
 import memoryCardGame from "../../assets/images/memoryCardGame.png";
 import kneeRehabUi from "../../assets/images/kneeRehabUi.png";
+import cvCreator from "../../assets/images/cvCreator.png";
 
 export default function ProjectsSection({ style }) {
     const projects = [
@@ -40,6 +41,15 @@ export default function ProjectsSection({ style }) {
             enabling real-time motor control and feedback. 
             It is deployable on both desktop and Android thanks 
             to the flexibility of the Qt Framework.`,
+        },
+        {
+            title: "CV Creator - A Simple Browser-Based Resume Builder",
+            imageSrc: cvCreator,
+            githubLink: `https://github.com/joeshawky/odin-cv-creator`,
+            demoLink: `https://joeshawky.github.io/odin-cv-creator/`,
+            description: `A clean and user-friendly application that allows users to 
+            enter their personal, educational, and professional details, and generate
+             a formatted CV that can be printed as a PDF.`,
         },
         {
             title: "Tic Tac Toe - Browser-Based Game Implementation",
