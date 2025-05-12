@@ -38,7 +38,7 @@
 
 .socials {
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 1.5rem;
     right: 5%;
     display: flex;
     flex-direction: column;
@@ -48,4 +48,12 @@
 .icon {
     width: clamp(16px, 8vw, 60px);
     cursor: pointer;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
 }

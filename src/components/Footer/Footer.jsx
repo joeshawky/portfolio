@@ -124,25 +124,33 @@ function Svgs() {
     );
 }
 
-export default function Footer({ style }) {
+function Socials() {
     const linkedinUrl = "https://www.linkedin.com/in/youssef02/";
     const githubUrl = "https://github.com/joeshawky";
 
     return (
+        <div className={styles.socials}>
+            <img
+                className={styles.icon}
+                src={linkedinIcon}
+                onClick={() => window.open(linkedinUrl, "_blank")}
+            />
+            <img
+                className={styles.icon}
+                src={githubIcon}
+                onClick={() => window.open(githubUrl, "_blank")}
+            />
+        </div>
+    );
+}
+
+export default function Footer({ style }) {
+
+    return (
         <footer className={styles.footer} style={style}>
             <Svgs />
-            <div className={styles.socials}>
-                <img
-                    className={styles.icon}
-                    src={linkedinIcon}
-                    onClick={() => window.open(linkedinUrl, "_blank")}
-                />
-                <img
-                    className={styles.icon}
-                    src={githubIcon}
-                    onClick={() => window.open(githubUrl, "_blank")}
-                />
-            </div>
+            <Socials />
+            <p className={styles.copyright}>&copy; Youssef Essam 2025</p>
         </footer>
     );
 }
