@@ -90,6 +90,7 @@
     scroll-behavior: smooth;
     transition: opacity 0.3s ease;
     text-align: left;
+    white-space: pre-wrap; 
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }

@@ -16,31 +16,31 @@ export default function ProjectsSection({ style }) {
             // githubLink: `https://github.com/yourusername/project`,
             // demoLink: `https://project.demo.com`,
             description: `Forked and customized the open-source QGroundControl 
-            ground control software to meet the operational needs of Lenta Marine's 
-            underwater ROV systems.
-            
-            Implemented advanced features including multi-camera streaming, 
-            audio recording, integration of custom sensors, and a fully 
-            redesigned user interface to optimize operator workflow and 
-            mission clarity. The application was developed using the Qt 
-            Framework, with QML for the frontend and C++ for backend logic.`,
+ground control software to meet the operational needs of Lenta Marine's 
+underwater ROV systems.
+
+Implemented advanced features including multi-camera streaming, 
+audio recording, integration of custom sensors, and a fully 
+redesigned user interface to optimize operator workflow and 
+mission clarity. The application was developed using the Qt 
+Framework, with QML for the frontend and C++ for backend logic.`,
         },
         {
             title: "Knee Rehab Robot Control App (Graduation Project)",
             imageSrc: kneeRehabUi,
             githubLink: `https://github.com/joeshawky/knee-rehab-app?tab=readme-ov-file`,
             description: `A cross-platform Qt application
-            built with QML on the frontend and C++ on the backend, developed 
-            as part of my graduation project for controlling a knee 
-            rehabilitation robot. The project was accepted into the 
-            TÜBİTAK 2209-B Industry-Oriented Undergraduate Research 
-            Projects Support Program.
+built with QML on the frontend and C++ on the backend, developed 
+as part of my graduation project for controlling a knee 
+rehabilitation robot. The project was accepted into the 
+TÜBİTAK 2209-B Industry-Oriented Undergraduate Research 
+Projects Support Program.
 
-            This application acts as the main user interface to 
-            communicate with a Raspberry Pi over Bluetooth, 
-            enabling real-time motor control and feedback. 
-            It is deployable on both desktop and Android thanks 
-            to the flexibility of the Qt Framework.`,
+This application acts as the main user interface to 
+communicate with a Raspberry Pi over Bluetooth, 
+enabling real-time motor control and feedback. 
+It is deployable on both desktop and Android thanks 
+to the flexibility of the Qt Framework.`,
         },
         {
             title: "CV Creator - A Simple Browser-Based Resume Builder",
@@ -48,8 +48,8 @@ export default function ProjectsSection({ style }) {
             githubLink: `https://github.com/joeshawky/odin-cv-creator`,
             demoLink: `https://joeshawky.github.io/odin-cv-creator/`,
             description: `A clean and user-friendly application that allows users to 
-            enter their personal, educational, and professional details, and generate
-             a formatted CV that can be printed as a PDF.`,
+enter their personal, educational, and professional details, and generate
+a formatted CV that can be printed as a PDF.`,
         },
         {
             title: "Tic Tac Toe - Browser-Based Game Implementation",
@@ -57,10 +57,10 @@ export default function ProjectsSection({ style }) {
             githubLink: `https://github.com/joeshawky/odin-tic-tac-toe`,
             demoLink: `https://joeshawky.github.io/odin-tic-tac-toe/`,
             description: `Developed a fully interactive Tic Tac Toe game 
-            using HTML, CSS, and vanilla JavaScript as part of The Odin 
-            Project web development curriculum. The project focuses on 
-            DOM manipulation, game logic implementation, and responsive 
-            layout without relying on external libraries or frameworks.`,
+using HTML, CSS, and vanilla JavaScript as part of The Odin 
+Project web development curriculum. The project focuses on 
+DOM manipulation, game logic implementation, and responsive 
+layout without relying on external libraries or frameworks.`,
         },
         {
             title: "Memory Card Game - React-Based Score Challenge",
@@ -68,12 +68,12 @@ export default function ProjectsSection({ style }) {
             githubLink: `https://github.com/joeshawky/odin-memory-card`,
             demoLink: `https://joeshawky.github.io/odin-memory-card/`,
             description: `Built an interactive memory card game using 
-            React as part of The Odin Project web development curriculum. 
-            
-            The game challenges users to click on unique cards without 
-            repetition, with cards being shuffled after each round to 
-            increase difficulty. Features include dynamic state management
-            with React hooks, score tracking, and responsive card layout.`,
+React as part of The Odin Project web development curriculum. 
+
+The game challenges users to click on unique cards without 
+repetition, with cards being shuffled after each round to 
+increase difficulty. Features include dynamic state management
+with React hooks, score tracking, and responsive card layout.`,
         },
     ];
 
