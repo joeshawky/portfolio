@@ -79,7 +79,7 @@
 
 .description {
     font-family: 'sansation-bold';
-    padding: 1.5rem .5rem;
+    padding: .5rem;
     font-weight: bold;
     letter-spacing: .15rem;
     opacity: 0;
@@ -90,7 +90,7 @@
     scroll-behavior: smooth;
     transition: opacity 0.3s ease;
     text-align: left;
-    white-space: pre-wrap; 
+    /* white-space: pre-wrap;  */
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }

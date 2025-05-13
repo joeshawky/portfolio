@@ -1,12 +1,10 @@
 .skillsSection {
     position: relative;
-    margin-top: 10rem;
 }
 
 .title {
     font-family: 'inter';
     font-weight: 400;
-    margin-top: 0rem;
     font-size: var(--section-title-size);
     letter-spacing: 0.4rem;
 }
