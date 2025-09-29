@@ -94,28 +94,37 @@ function Card({ row, position, companyName, tasks, isLeft = false, date }) {
 
 export default function ExperienceSection({ style }) {
     const experiences = [
-        {
-            companyName: "Letna Marine",
-            position: "Software Developer",
-            date: "feb 2023 - current",
-            tasks: [
-                "Extended an open-source ROV control application using C++ and QML with the Qt Framework.",
-                "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application.",
-                `Redesigned the user interface to improve ROV operator experience and clarity.`,
-            ],
-            isLeft: true,
-        },
-        {
-            companyName: "Lagari UAV Club",
-            position: "Software Developer",
-            date: "jan 2022 - jun 2022",
-            tasks: [
-                "Developed Python scripts for real-time image recognition to detect red-colored targets.",
-                "Implemented GPS geolocation and automated target coordinate transmission.",
-                "Participated in the 2022 Teknofest UAV Competition as part of the flight software team.",
-            ],
-            isLeft: false,
-        },
+      {
+        companyName: "Technomind Digital Systems",
+        position: "Software Engineer",
+        date: "June 2025 - Current",
+        tasks: [
+          "Developed a web based control application for a digital pathology device using React, TypeScript, and Flask.",
+          "Improved autofocus and scanning algorithms for high precision imaging, achieving an 818% increase in scanning speed and significantly enhancing device performance.",
+          "Collaborated with hardware engineers to integrate motion control features and ensure smooth device software interaction.",
+          "Refactored old code into clean, modular components to make development and onboarding easier.",
+        ],
+      },
+      {
+        companyName: "Letna Marine",
+        position: "Software Developer",
+        date: "Feb 2023 - June 2025",
+        tasks: [
+          "Extended an open-source ROV control application using C++ and QML with the Qt Framework.",
+          "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application.",
+          `Redesigned the user interface to improve ROV operator experience and clarity.`,
+        ],
+      },
+      {
+        companyName: "Lagari UAV Club",
+        position: "Software Developer",
+        date: "Jan 2022 - June 2022",
+        tasks: [
+          "Developed Python scripts for real time image recognition to auto detect targets.",
+          "Implemented GPS geolocation and automated target coordinate transmission.",
+          "Participated in the 2022 Teknofest UAV Competition as part of the flight software team.",
+        ],
+      },
     ];
 
     return (
@@ -133,10 +142,11 @@ export default function ExperienceSection({ style }) {
                                 companyName={experience.companyName}
                                 row={index + 1}
                                 tasks={experience.tasks}
-                                isLeft={experience.isLeft}
+                                isLeft={index % 2 === 0}
                                 date={experience.date}
                             />
-                            {experience.isLeft ? (
+                            {/* {experience.isLeft? ( */}
+                            {index % 2 === 0 ? (
                                 <>
                                     <div
                                         className={`${styles.circle} ${styles.circleLeft}`}
