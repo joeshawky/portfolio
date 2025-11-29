@@ -51,8 +51,9 @@
 }
 
 .copyright {
+    font-size: var(--fs-4);
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.75rem;
     left: 50%;
     transform: translateX(-50%);
     color: black;

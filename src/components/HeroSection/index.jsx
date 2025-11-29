@@ -6,12 +6,12 @@ import styles from "./styles.module.css";
 
 export default function HeroSection() {
     const nameSurname = "Youssef Essam";
-    const position = "Software Developer";
+    const position = "Software & Embedded Systems Engineer";
     const location = "Istanbul, Turkey";
     // const description = `From a hobby to a way of maintaining life. The code has become a
     //             part of me`;
-    const description = `Full-stack development focused on performance, 
-    clarity, and usability.
+    const description = `Building high-performance software and embedded systems 
+    with Python, C++, and web frameworks..
 
 `;
 

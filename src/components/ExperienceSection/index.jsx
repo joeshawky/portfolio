@@ -99,10 +99,10 @@ export default function ExperienceSection({ style }) {
         position: "Software Engineer",
         date: "June 2025 - Current",
         tasks: [
-          "Developed a web based control application for a digital pathology device using React, TypeScript, and Flask.",
+          "Built and maintained the web control interface for a digital pathology device using React, TypeScript and Tailwind CSS.",
           "Improved autofocus and scanning algorithms for high precision imaging, achieving an 818% increase in scanning speed and significantly enhancing device performance.",
-          "Collaborated with hardware engineers to integrate motion control features and ensure smooth device software interaction.",
-          "Refactored old code into clean, modular components to make development and onboarding easier.",
+          "Collaborated cross functionally with hardware engineers to align software improvements with device capabilities.",
+          "Refactored legacy codebases into clean, modular components.",
         ],
       },
       {
@@ -110,9 +110,9 @@ export default function ExperienceSection({ style }) {
         position: "Software Developer",
         date: "Feb 2023 - June 2025",
         tasks: [
-          "Extended an open-source ROV control application using C++ and QML with the Qt Framework.",
-          "Implemented multi-camera streaming, audio recording, and custom sensor integration within the same application.",
-          `Redesigned the user interface to improve ROV operator experience and clarity.`,
+          "Extended an open source ROV control application using C++ and QML within the Qt Framework.",
+          "Implemented multi camera streaming, audio recording, and custom sensor integration within the same application.",
+          "Redesigned the user interface to improve ROV operator experience and clarity.",
         ],
       },
       {
@@ -120,9 +120,9 @@ export default function ExperienceSection({ style }) {
         position: "Software Developer",
         date: "Jan 2022 - June 2022",
         tasks: [
-          "Developed Python scripts for real time image recognition to auto detect targets.",
-          "Implemented GPS geolocation and automated target coordinate transmission.",
           "Participated in the 2022 Teknofest UAV Competition as part of the flight software team.",
+          "Built real-time target detection and geolocation pipeline using Python and OpenCV.",
+          "Integrated autonomous navigation logic into the UAV control stack for payload delivery.",
         ],
       },
     ];
