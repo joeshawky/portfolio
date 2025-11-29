@@ -10,10 +10,7 @@ export default function HeroSection() {
     const location = "Istanbul, Turkey";
     // const description = `From a hobby to a way of maintaining life. The code has become a
     //             part of me`;
-    const description = `Building high-performance software and embedded systems 
-    with Python, C++, and web frameworks..
-
-`;
+    const description = `Building high-performance software and embedded systems.`;
 
     const scrollToProjectsSection = () => {
         const section = document.getElementById("projects");
