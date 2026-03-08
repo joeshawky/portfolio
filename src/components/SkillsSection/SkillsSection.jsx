@@ -7,6 +7,8 @@ import cplusplusImage from "../../assets/icons/cplusplus.png";
 import jsImage from "../../assets/icons/js.png";
 import reactImage from "../../assets/icons/react.png";
 import qtImage from "../../assets/icons/qt.png";
+import tsImage from "../../assets/icons/TypeScript.png";
+import tailwindImage from "../../assets/icons/tailwind.png"
 
 import styles from "./styles.module.css";
 
@@ -34,6 +36,8 @@ export default function SkillsSection({ style }) {
         { src: reactImage, ref: useRef() },
         { src: pythonImage, ref: useRef() },
         { src: qtImage, ref: useRef() },
+        { src: tsImage, ref: useRef() },
+        { src: tailwindImage, ref: useRef() },
     ];
 
     const width = useWindowWidth();
