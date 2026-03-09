@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { debounce } from "../../utilities/debounce";
 
 function Svgs() {
   return (
@@ -57,27 +58,28 @@ function Svgs() {
   );
 }
 
-function Card({ row, position, companyName, tasks, isLeft = false, date }) {
+function Card({
+  row,
+  position,
+  companyName,
+  tasks,
+  isLeft = false,
+  date,
+  ref,
+}) {
   const timelineBoxStyles = isLeft
     ? "col-start-1 border-l-2 bg-[linear-gradient(to_left,#0f0f15,rgba(255,255,255,0.05))]"
     : "col-start-3 border-r-2 bg-[linear-gradient(to_right,#0f0f15,rgba(255,255,255,0.05))] max-[750px]:border-r-0 max-[750px]:border-l-2 max-[750px]:border-l-solid max-[750px]:border-l-white max-[750px]:bg-[linear-gradient(to_left,#0f0f15,rgba(255,255,255,0.05))]";
   return (
     <div
-      className={`${timelineBoxStyles} col-span-1 flex max-w-150 flex-col gap-2 rounded-lg p-[min(2rem,6vw)] pr-[min(1rem,3vw)] max-[750px]:col-1`}
-      style={{
-        gridRow: `${row} / span 1`,
-      }}
+      className={`${timelineBoxStyles} row-start-${row} col-span-1 row-span-1 flex max-w-150 flex-col gap-2 rounded-lg p-[min(2rem,6vw)] pr-[min(1rem,3vw)] max-[750px]:col-1`}
+      ref={row === 1 ? ref : null}
     >
       <h1 className="font-inter self-start [font-size:var(--position-size)]">
         {position}
       </h1>
       <div className="flex justify-between gap-8">
-        <p
-          className="font-inter [font-size:var(--company-size)] [font-weight:300] italic"
-          style={{
-            alignSelf: "flex-start",
-          }}
-        >
+        <p className="font-inter self-start [font-size:var(--company-size)] [font-weight:300] italic">
           {companyName}
         </p>
 
@@ -100,6 +102,25 @@ function Card({ row, position, companyName, tasks, isLeft = false, date }) {
 }
 
 export default function ExperienceSection({ style }) {
+  const firstCardRef = useRef(null);
+  const [offsetTop, setOffsetTop] = useState(0);
+
+  useEffect(() => {
+    if (!firstCardRef.current) return;
+
+    const card = firstCardRef.current;
+
+    const debouncedUpdate = debounce(() => {
+      setOffsetTop(card.offsetHeight / 2);
+      console.log(`Called debounced function`);
+    }, 50);
+
+    const observer = new ResizeObserver(debouncedUpdate);
+    observer.observe(card);
+
+    return () => observer.disconnect();
+  }, []);
+
   const experiences = [
     {
       companyName: "Technomind Digital Systems",
@@ -143,12 +164,19 @@ export default function ExperienceSection({ style }) {
         <h2 className="font-inter [font-size:var(--section-title-size)] [font-weight:400] tracking-[0.4rem]">
           EXPERIENCE
         </h2>
-        <div className="grid max-w-[1400px] grid-cols-[1fr_auto_1fr] grid-rows-[1fr_1fr_auto] items-center justify-items-center gap-[var(--experience-gap)] px-8 max-[750px]:grid-cols-1">
-          <div className="relative top-[calc(100%/4)] col-start-2 row-span-2 row-start-1 h-full w-px self-start bg-[linear-gradient(to_bottom,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] max-[750px]:hidden"></div>
+        <div className="grid max-w-[1400px] grid-cols-[1fr_auto_1fr] grid-rows-[1fr_1fr_auto] items-center justify-items-center gap-[var(--experience-gap)] overflow-hidden px-8 max-[750px]:grid-cols-1">
+          <div
+            className="bx relative col-start-2 row-start-1 h-full w-px bg-[linear-gradient(to_bottom,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] max-[750px]:hidden"
+            style={{
+              gridRowEnd: `span ${experiences.length}`,
+              top: offsetTop,
+            }}
+          ></div>
 
           {experiences.map((experience, index) => (
             <React.Fragment key={index}>
               <Card
+                ref={firstCardRef}
                 position={experience.position}
                 companyName={experience.companyName}
                 row={index + 1}
@@ -156,19 +184,21 @@ export default function ExperienceSection({ style }) {
                 isLeft={index % 2 === 0}
                 date={experience.date}
               />
+
               {index % 2 === 0 ? (
                 <>
                   <div
-                    className="relative col-span-1 col-start-2 h-5 w-5 rounded-[50%] border border-solid border-white bg-gray-500 text-[#1100ff] before:absolute before:top-0 before:left-0 before:-z-1 before:h-px before:w-[130px] before:transform-[translate(calc(-100%),calc(20px/2-1px))] before:rounded-[10%] before:bg-[linear-gradient(to_left,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] before:content-[''] max-[750px]:hidden"
+                    className={`relative col-span-1 col-start-2 row-span-1 h-5 w-5 rounded-[50%] border border-solid border-white bg-gray-500 text-[#1100ff] before:absolute before:top-0 before:left-0 before:-z-1 before:h-px before:w-[130px] before:transform-[translate(calc(-100%),calc(20px/2-1px))] before:rounded-[10%] before:bg-[linear-gradient(to_left,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] before:content-[''] max-[750px]:hidden`}
                     style={{
-                      gridRow: `${index + 1} / span 1`,
+                      gridRowStart: index + 1,
                     }}
-                  ></div>
+                  >
+                    {index}
+                  </div>
                   <p
-                    className="font-inter text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden"
+                    className={`font-inter col-span-1 col-start-3 row-span-1 text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden`}
                     style={{
-                      gridRow: `${index + 1} / span 1`,
-                      gridColumn: `${`3 / span 1`}`,
+                      gridRowStart: index + 1,
                     }}
                   >
                     {experience.date}
@@ -177,16 +207,17 @@ export default function ExperienceSection({ style }) {
               ) : (
                 <>
                   <div
-                    className="relative col-span-1 col-start-2 h-5 w-5 rounded-[50%] border border-solid border-white bg-gray-500 text-[#1100ff] before:absolute before:top-0 before:right-0 before:-z-1 before:h-px before:w-[130px] before:transform-[translate(calc(100%),calc(20px/2-1px))] before:rounded-[10%] before:bg-[linear-gradient(to_right,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] before:content-[''] max-[750px]:hidden"
+                    className={`relative col-span-1 col-start-2 row-span-1 h-5 w-5 rounded-[50%] border border-solid border-white bg-gray-500 text-[#1100ff] before:absolute before:top-0 before:right-0 before:-z-1 before:h-px before:w-[130px] before:transform-[translate(calc(100%),calc(20px/2-1px))] before:rounded-[10%] before:bg-[linear-gradient(to_right,rgba(255,255,255,0.6),rgba(0,0,0,0.1))] before:content-[''] max-[750px]:hidden`}
                     style={{
-                      gridRow: `${index + 1} / span 1`,
+                      gridRowStart: index + 1,
                     }}
-                  ></div>
+                  >
+                    {index}
+                  </div>
                   <p
-                    className="font-inter text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden"
+                    className={`font-inter col-span-1 col-start-1 row-span-1 text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden`}
                     style={{
-                      gridRow: `${index + 1} / span 1`,
-                      gridColumn: `${`1 / span 1`}`,
+                      gridRowStart: index + 1,
                     }}
                   >
                     {experience.date}
