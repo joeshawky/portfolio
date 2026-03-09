@@ -7,9 +7,8 @@ import cplusplusImage from "../../assets/icons/cplusplus.png";
 import jsImage from "../../assets/icons/js.png";
 import reactImage from "../../assets/icons/react.png";
 import qtImage from "../../assets/icons/qt.png";
-import tsImage from "../../assets/icons/TypeScript.png";
+import tsImage from "../../assets/icons/typescript.png";
 import tailwindImage from "../../assets/icons/tailwind.png";
-
 
 function initializeIconsAnimation(refs) {
   refs.forEach((ref, i) => {
