@@ -1,22 +1,39 @@
-@import './assets/fonts/fonts.css';
+@import "./assets/fonts/fonts.css";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+  }
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "inter-variable", sans-serif;
+  --font-hero-title: "sansation-regular", sans-serif;
+  --font-hero-subtitle: "sansation-light", sans-serif;
+  --font-sansation-light: "sansation-light", sans-serif;
+  --font-inter: "inter", sans-serif;
+  --font-sansation-bold: "sansation-bold", sans-serif;
+  --color-primary-bg: #08090e;
+  --color-subtitle: #dadada;
 }
 
 :root {
-  --main-bg-color: #08090E;
-  --gradiant-first-color: #0B0A10;
-  --gradiant-second-color-one: #0D0E12;
-  --gradiant-second-color-two: #08090E;
-  --gradiant-third-color: #100F16;
-  
-  --elipse-gradiant-first-color: #181521;
-  --elipse-gradiant-second-color: #07070D;
-  --elipse-bg-color: #6C6B6B;
+  --main-bg-color: #08090e;
+  --gradiant-first-color: #0b0a10;
+  --gradiant-second-color-one: #0d0e12;
+  --gradiant-second-color-two: #08090e;
+  --gradiant-third-color: #100f16;
 
-  --text-white-color: #FFFFFF;
-  --text-grey-color: #DADADA;
+  --elipse-gradiant-first-color: #181521;
+  --elipse-gradiant-second-color: #07070d;
+  --elipse-bg-color: #6c6b6b;
+
+  --text-white-color: #ffffff;
+  --text-grey-color: #dadada;
+
+  --font-main: "inter-variable", sans-serif;
 }
