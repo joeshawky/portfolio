@@ -192,9 +192,7 @@ export default function ExperienceSection({ style }) {
                     style={{
                       gridRowStart: index + 1,
                     }}
-                  >
-                    {index}
-                  </div>
+                  ></div>
                   <p
                     className={`font-inter col-span-1 col-start-3 row-span-1 text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden`}
                     style={{
@@ -211,9 +209,7 @@ export default function ExperienceSection({ style }) {
                     style={{
                       gridRowStart: index + 1,
                     }}
-                  >
-                    {index}
-                  </div>
+                  ></div>
                   <p
                     className={`font-inter col-span-1 col-start-1 row-span-1 text-end [font-size:var(--company-size)] [font-weight:200] whitespace-nowrap text-white italic max-[750px]:hidden`}
                     style={{
