@@ -44,52 +44,6 @@ Framework, with QML for the frontend and C++ for backend logic.`,
         </>
       ),
     },
-    {
-      title: "CV Creator - A Simple Browser-Based Resume Builder",
-      imageSrc: cvCreator,
-      githubLink: `https://github.com/joeshawky/odin-cv-creator`,
-      demoLink: `https://joeshawky.github.io/odin-cv-creator/`,
-      description: (
-        <>
-          A clean and user-friendly application that allows users to enter their
-          personal, educational, and professional details, and generate a
-          formatted CV that can be printed as a PDF.
-        </>
-      ),
-    },
-    {
-      title: "Tic Tac Toe - Browser-Based Game Implementation",
-      imageSrc: ticTacToe,
-      githubLink: `https://github.com/joeshawky/odin-tic-tac-toe`,
-      demoLink: `https://joeshawky.github.io/odin-tic-tac-toe/`,
-      description: (
-        <>
-          Developed a fully interactive Tic Tac Toe game using HTML, CSS, and
-          vanilla JavaScript as part of The Odin Project web development
-          curriculum. The project focuses on DOM manipulation, game logic
-          implementation, and responsive layout without relying on external
-          libraries or frameworks.
-        </>
-      ),
-    },
-    {
-      title: "Memory Card Game - React-Based Score Challenge",
-      imageSrc: memoryCardGame,
-      githubLink: `https://github.com/joeshawky/odin-memory-card`,
-      demoLink: `https://joeshawky.github.io/odin-memory-card/`,
-      description: (
-        <>
-          Built an interactive memory card game using React as part of The Odin
-          Project web development curriculum.
-          <br />
-          <br />
-          The game challenges users to click on unique cards without repetition,
-          with cards being shuffled after each round to increase difficulty.
-          Features include dynamic state management with React hooks, score
-          tracking, and responsive card layout.
-        </>
-      ),
-    },
   ];
 
   return (
@@ -138,7 +92,7 @@ Framework, with QML for the frontend and C++ for backend logic.`,
             <p className="font-sansation-bold max-h-[70%] overflow-y-auto scroll-smooth [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] p-2 text-left [font-weight:bold] tracking-[0.15rem] opacity-0 transition-opacity duration-300 ease-in-out [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [scrollbar-color:#c1c1c1_transparent] [scrollbar-width:thin] group-hover:opacity-100">
               {project.description}
             </p>
-            <h3 className="font-inter mt-auto [font-size:1rem] tracking-[0.2rem] [font-weight:700]">
+            <h3 className="font-inter mt-auto [font-size:1rem] [font-weight:700] tracking-[0.2rem]">
               {project.title}
             </h3>
             <div className="flex min-h-4 items-center justify-end gap-8">
